@@ -1,0 +1,23 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1351448485.749629:@value{	I"length:EFiÜI"digest;
+F"%6c42ba98112ae4b1d5ffaf7083346e4aI"source;
+FI"Ü/* =============================================================
+ * bootstrap-scrollspy.js v1.3.0
+ * http://twitter.github.com/bootstrap/javascript.html#scrollspy
+ * =============================================================
+ * Copyright 2011 Twitter, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ============================================================== */
+!function(e){function n(n,r){var i=e.proxy(this.processScroll,this);this.$topbar=e(n),this.selector=r||"li > a",this.refresh(),this.$topbar.delegate(this.selector,"click",i),t.scroll(i),this.processScroll()}var t=e(window);n.prototype={refresh:function(){this.targets=this.$topbar.find(this.selector).map(function(){var t=e(this).attr("href");return/^#\w/.test(t)&&e(t).length?t:null}),this.offsets=e.map(this.targets,function(t){return e(t).offset().top})},processScroll:function(){var e=t.scrollTop()+10,n=this.offsets,r=this.targets,i=this.activeTarget,s;for(s=n.length;s--;)i!=r[s]&&e>=n[s]&&(!n[s+1]||e<=n[s+1])&&this.activateButton(r[s])},activateButton:function(e){this.activeTarget=e,this.$topbar.find(this.selector).parent(".active").removeClass("active"),this.$topbar.find(this.selector+'[href="'+e+'"]').parent("li").addClass("active")}},e.fn.scrollSpy=function(t){var r=this.data("scrollspy");return r?t===!0?r:(typeof t=="string"&&r[t](),this):this.each(function(){e(this).data("scrollspy",new n(this,t))})},e(document).ready(function(){e("body").scrollSpy("[data-scrollspy] li > a")})}(window.jQuery||window.ender);;
+TI"_version;
+F"%d9bfca24efa7589a0a60091375115f70

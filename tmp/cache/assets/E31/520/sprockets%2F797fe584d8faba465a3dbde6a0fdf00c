@@ -1,0 +1,23 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1351448485.776136:@value{	I"length:EFinI"digest;
+F"%22a529a7c87c2e86aff1813b0ec88eaaI"source;
+FI"n/* ========================================================
+ * bootstrap-tabs.js v1.3.0
+ * http://twitter.github.com/bootstrap/javascript.html#tabs
+ * ========================================================
+ * Copyright 2011 Twitter, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ======================================================== */
+!function(e){function t(e,t){t.find(".active").removeClass("active"),e.addClass("active")}function n(n){var r=e(this),i=r.attr("href"),s=r.closest("ul"),o;if(/^#\w+/.test(i)){n.preventDefault();if(r.hasClass("active"))return;$href=e(i),t(r.parent("li"),s),t($href,$href.parent())}}e.fn.tabs=e.fn.pills=function(t){return this.each(function(){e(this).delegate(t||".tabs li > a, .pills > li > a","click",n)})},e(document).ready(function(){e("body").tabs("ul[data-tabs] li > a, ul[data-pills] > li > a")})}(window.jQuery||window.ender);;
+TI"_version;
+F"%62f5e56275644a7171187cf40450305a
