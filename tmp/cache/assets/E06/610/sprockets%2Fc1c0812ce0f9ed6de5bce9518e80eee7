@@ -1,8 +1,8 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1351026717.6211252:@value{	I"length:EFiçI"digest;
-F"%3bbce29aca154d2d2f87678ea8bbde41I"source;
-FI"ç/* line 1, ../../app/assets/stylesheets/scaffolds.css.scss */
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1352067756.007863:@value{	I"length:EFiêI"digest;
+F"%5ef67a3062fdfb31d265435337cd8133I"source;
+FI"ê/* line 1, ../../app/assets/stylesheets/scaffolds.css.scss */
 body {
-  background-color: #fff;
+  background-color: #F0EDEE;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -81,4 +81,4 @@ div.field, div.actions {
 }
 ;
 FI"_version;
-F"%4bb9a214202bd8d8d5eb8cb65ee8676c
+F"%5b8db76f68b0f04cb99236a71770e501

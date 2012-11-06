@@ -60,13 +60,13 @@
 		    position: yourLocation,
 		   map: map,
 		    title: 'You are here',
-		    icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png',
+		    icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/pink/blank.png',
 		   
 		});
 		
-		var infowindow = new google.maps.InfoWindow({
-		content:'Fuck this shit'
-		});
+		//var infowindow = new google.maps.InfoWindow({
+		//content:''
+		//});
 		
 		// Adding a click event to the marker
 		google.maps.event.addListener(marker, 'click', function() {

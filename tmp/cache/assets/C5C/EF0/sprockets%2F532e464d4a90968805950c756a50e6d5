@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1351800137.9229178:@value{	I"length:EFijI"digest;
-F"%21b0dfb935109fbddcc8b2cfa9e2fe93I"source;
-FI"j
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1352059295.436372:@value{	I"length:EFiaI"digest;
+F"%9c1a8177734cedade52a0323195570feI"source;
+FI"a
 	// Google Maps global map variable
 	var map;
 	
@@ -62,13 +62,13 @@ FI"j
 		    position: yourLocation,
 		   map: map,
 		    title: 'You are here',
-		    icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png',
+		    icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/pink/blank.png',
 		   
 		});
 		
-		var infowindow = new google.maps.InfoWindow({
-		content:'Fuck this shit'
-		});
+		//var infowindow = new google.maps.InfoWindow({
+		//content:''
+		//});
 		
 		// Adding a click event to the marker
 		google.maps.event.addListener(marker, 'click', function() {
@@ -100,4 +100,4 @@ FI"j
 ;
 ;
 FI"_version;
-F"%562a3535df432309effd20affa8ab672
+F"%241ef46ff17117f6f41985d97bf2da78
