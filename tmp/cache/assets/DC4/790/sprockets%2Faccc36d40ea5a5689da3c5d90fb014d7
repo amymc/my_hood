@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1352082824.053471:@value{	I"length:EFiXI"digest;
-F"%357602070561362c1fb62bb6f0c5d43eI"source;
-FI"X/*
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1352251355.727871:@value{	I"length:EFiXI"digest;
+F"%4ac3a84d1deb55de401e1a48455a7ef4I"source;
+FI"X/*
  * Bootstrap v2.1.1
  *
  * Copyright 2012 Twitter, Inc
@@ -8222,7 +8222,7 @@ body {
 
 /* line 19, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .container {
-  text-align: center;
+  text-align: justify;
 }
 
 /* line 24, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
@@ -8237,4 +8237,4 @@ body {
 }
 ;
 FI"_version;
-F"%11fbda9a9e40b715c43369e5f51e19cc
+F"%82a1b3941ecb6ad21315dc74231689a4

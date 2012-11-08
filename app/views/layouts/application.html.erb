@@ -19,7 +19,7 @@
 </head>
 <body>
   <div class="navbar navbar-fixed-top">
-
+ 	<div class="navbar navbar-inverse">
     <div class="navbar-inner">
       <div class="container">
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -28,19 +28,35 @@
           <span class="icon-bar"></span>
         </a>
         
-        <%= link_to "What's happenin' in my 'hood?", "#", :class => "brand" %>
+        <%= link_to "What's happenin in my hood?", "/maps", :class => "brand" %>
         <div class="nav-collapse">
           <ul class="nav">
-            <li><a href="#"><i class="icon-home"></i> Home</a></li>
+            <li><a href="/maps"><i class="icon-home"></i> Home</a></li>
             
-            <li><a href="#about">About</a></li>
+            <li><a href="/events">Events</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
+          <%# input append ensures that the text box and the submit button are aligned%>
+		<div class="input-append">
+			<%# Puts the search box in the right hand side of the nav bar%>
+			<form class="navbar-search pull-right">
+			<%= form_tag("/events", :method => "get") do %>
+  				<%= text_field_tag :search, params[:search] %>
+  				 <button type="submit" class="btn btn-info">
+   					 search <i class="icon-search"></i> 
+   				</button>
+			<% end %>
+			</form>
+ 		</div>
         </div>
-
-        </div>
-    </div>
-  </div>
+        
+        
+   
+        
+      </div>
+    </div>  
+</div>
+</div>
   <div class="container">
     <% flash.each do |name, msg| %>
       <%= content_tag :div, :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do %>

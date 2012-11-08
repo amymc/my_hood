@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1352082823.103864:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1352251354.844715:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%11fbda9a9e40b715c43369e5f51e19ccI"logical_path;
+F"%82a1b3941ecb6ad21315dc74231689a4I"logical_path;
 FI" bootstrap_and_overrides.css;
 FI"pathname;
 FI"B$root/app/assets/stylesheets/bootstrap_and_overrides.css.scss;
@@ -9,9 +9,9 @@ FI"content_type;
 FI"text/css;
 FI"
 mtime;
-FI"2012-11-05T02:33:38+00:00;
+FI"2012-11-07T01:21:02+00:00;
 FI"	body;
-FI"X/*
+FI"X/*
  * Bootstrap v2.1.1
  *
  * Copyright 2012 Twitter, Inc
@@ -8233,7 +8233,7 @@ body {
 
 /* line 19, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .container {
-  text-align: center;
+  text-align: justify;
 }
 
 /* line 24, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
@@ -8254,9 +8254,9 @@ F[{I"	path;
 FI"B$root/app/assets/stylesheets/bootstrap_and_overrides.css.scss;
 FI"
 mtime;
-FIu:	Time¢(€  `†:@_zoneI"GMT;
+FIu:	Timeá(€   T:@_zoneI"GMT;
 T:offseti I"hexdigest;
-F"%3728888a184f33fa60112ab3c25a7a23{I"	path;
+F"%ee7ff31d88f4f35b36f184ef3e41a605{I"	path;
 FI"s/Users/amymc/.rvm/gems/ruby-1.9.3-p194/gems/bootstrap-generators-2.1.1/vendor/assets/stylesheets/bootstrap.css;
 FI"
 mtime;

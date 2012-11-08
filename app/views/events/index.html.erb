@@ -1,12 +1,13 @@
-<h1>Listing events</h1>
+<h1></h1>
 
-<table>
+
+<table class="table table-hover">
   <tr>
     <th>Title</th>
     <th>Description</th>
     <th>Price</th>
     <th>Date</th>
-    <th>Location</th>
+    <th>Area</th>
     <th>Genre</th>
     <th></th>
     <th></th>
@@ -19,20 +20,14 @@
     <td><%= event.description %></td>
     <td><%= event.price %></td>
     <td><%= event.date %></td>
-    <td><%= event.location %></td>
+    <td><%= event.area %></td>
     <td><%= event.genre %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
+<br/>
+<br/>
+<br/>
+<br/>
 
-<%= form_tag("/events", :method => "get") do %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag("Search") %>
-<% end %>
 
-<br />
-
-<%= link_to 'New Event', new_event_path %>

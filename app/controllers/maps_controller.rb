@@ -2,7 +2,7 @@ class MapsController < ApplicationController
   # GET /maps
   # GET /maps.json
   def index
-    @maps = Map.all
+    @events = Event.search(params[:search])
 
     respond_to do |format|
       format.html # index.html.erb

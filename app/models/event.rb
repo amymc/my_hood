@@ -5,7 +5,7 @@ class Event < ActiveRecord::Base
 			#find(:all,:conditions => ['title LIKE ?', "%#{search}%"])
 
   
-			find(:all,:conditions => ['title LIKE :search OR description LIKE :search OR genre LIKE :search ', {:search =>"%#{search}%"}])
+			find(:all,:conditions => ['title LIKE :search OR description LIKE :search OR area LIKE :search OR genre LIKE :search ', {:search =>"%#{search}%"}])
 			#All.where('title <=? LIKE ?', "%#{ search_query}%"])
 		#event = Event.where(params[:search])
 			#Event.where("title like ?", params[:search]+"%")
