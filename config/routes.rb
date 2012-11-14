@@ -1,4 +1,6 @@
 Myhood::Application.routes.draw do
+  resources :users
+
   resources :maps
 
   resources :events

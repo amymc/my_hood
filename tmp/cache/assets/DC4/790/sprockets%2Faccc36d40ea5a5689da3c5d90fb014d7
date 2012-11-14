@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1352251355.727871:@value{	I"length:EFiXI"digest;
-F"%4ac3a84d1deb55de401e1a48455a7ef4I"source;
-FI"X/*
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1352851775.734048:@value{	I"length:EFiÕZI"digest;
+F"%d516148369bddd48d615e2d86abd4a80I"source;
+FI"ÕZ/*
  * Bootstrap v2.1.1
  *
  * Copyright 2012 Twitter, Inc
@@ -8215,26 +8215,51 @@ body {
   text-shadow: none;
 }
 
-/* line 14, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
-.navbar-fixed-top .navbar-inner {
-  background-colour: black;
+/* line 12, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.form-signin {
+  max-width: 300px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 19, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
-.container {
-  text-align: justify;
+/* line 26, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
 }
 
-/* line 24, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 30, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.form-signin input[type="text"],
+.form-signin input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+}
+
+/* line 38, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .brand {
   text-shadow: none;
   color: #9D20AB;
 }
 
-/* line 29, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 43, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .nav > li > a {
   text-shadow: none;
 }
+
+/* line 47, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.sign_up {
+  text-align: center;
+}
 ;
 FI"_version;
-F"%82a1b3941ecb6ad21315dc74231689a4
+F"%94b0c8d4b6412f705f4868c95dd68ee4

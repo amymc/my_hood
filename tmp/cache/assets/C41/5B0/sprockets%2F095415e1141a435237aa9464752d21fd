@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1352251355.332984:@value{	I"length:EFi”bI"digest;
-F"%9cc4eec28f580019b5faf3a09c45d6b1I"source;
-FI"”b/*
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1352851775.692002:@value{	I"length:EFiJeI"digest;
+F"%69a857e2818e1b6e1e66b216b666c94eI"source;
+FI"Je/*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
@@ -8233,25 +8233,50 @@ body {
   text-shadow: none;
 }
 
-/* line 14, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
-.navbar-fixed-top .navbar-inner {
-  background-colour: black;
+/* line 12, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.form-signin {
+  max-width: 300px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 19, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
-.container {
-  text-align: justify;
+/* line 26, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
 }
 
-/* line 24, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 30, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.form-signin input[type="text"],
+.form-signin input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+}
+
+/* line 38, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .brand {
   text-shadow: none;
   color: #9D20AB;
 }
 
-/* line 29, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 43, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .nav > li > a {
   text-shadow: none;
+}
+
+/* line 47, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.sign_up {
+  text-align: center;
 }
 /* line 7, ../../app/assets/stylesheets/maps.css.scss */
 #map {
@@ -8340,4 +8365,4 @@ div.field, div.actions {
 }
 ;
 FI"_version;
-F"%8d9b3d542c27f35b7d1cc9d93aeeb5e3
+F"%a06d26c0257ce5e6b65b59b90c3bdf8f

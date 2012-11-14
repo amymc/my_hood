@@ -1,3 +1,16 @@
+module COMMON
+	module SEARCH
+		def search
+		  @events = Event.search(params[:search])
+		  redirect_to @events
+		end 
+	end	
+
+	def self.included(base)
+    	base.extend(SEARCH)
+  	end
+end
+
 class EventsController < ApplicationController
   #GET /events
   #GET /events.json
