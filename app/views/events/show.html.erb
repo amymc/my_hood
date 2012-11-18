@@ -1,34 +1,28 @@
-<p id="notice"><%= notice %></p>
+<ul>
+<% for event in @event.nearbys(20) %>
+  <li><%= link_to event.address, event %> (<%= event.distance.round(2) %> miles)</li>
+<% end %>
+</ul<% title "Location" %>
 
 <p>
-  <b>Title:</b>
-  <%= @event.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @event.description %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%= @event.price %>
-</p>
-
-<p>
-  <b>Date:</b>
-  <%= @event.date %>
-</p>
-
-<p>
-  <b>Location:</b>
+  <strong>Address:</strong>
   <%= @event.location %>
 </p>
-
 <p>
-  <b>Genre:</b>
-  <%= @event.genre %>
+  <strong>Latitude:</strong>
+  <%= @event.latitude %>
 </p>
+<p>
+  <strong>Longitude:</strong>
+  <%= @event.longitude %>
+</p>
+
+<h3>Nearby Locations</h3>
+<ul>
+<% for event in @event.nearbys(10) %>
+  <li><%= link_to event.address, event %> (<%= event.distance.round(1) %> miles)</li>
+<% end %>
+</ul>
 
 
 <%= link_to 'Edit', edit_event_path(@event) %> |

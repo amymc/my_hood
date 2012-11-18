@@ -3,6 +3,13 @@ class MapsController < ApplicationController
   # GET /maps.json
   def index
   	@maps = Map.all
+  	
+  	#if params[:search].present?
+    	#@events = events.near(params[:search], 50, :order => :distance)
+  	#else
+    #	@locations = Location.all
+  	#end
+
 
     respond_to do |format|
       format.html # index.html.erb

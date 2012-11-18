@@ -22,6 +22,8 @@ gem 'bootstrap-generators', '~> 2.1'
 
 gem 'railties'
 
+gem 'gmaps4rails'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

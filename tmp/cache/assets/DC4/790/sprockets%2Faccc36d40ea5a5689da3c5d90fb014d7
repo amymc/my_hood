@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1352851775.734048:@value{	I"length:EFiÕZI"digest;
-F"%d516148369bddd48d615e2d86abd4a80I"source;
-FI"ÕZ/*
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353242838.868376:@value{	I"length:EFiî[I"digest;
+F"%f8dea40e8c44a2dda156467a06b7ad84I"source;
+FI"î[/*
  * Bootstrap v2.1.1
  *
  * Copyright 2012 Twitter, Inc
@@ -8215,7 +8215,19 @@ body {
   text-shadow: none;
 }
 
-/* line 12, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/*---Fix the navigation at side of map---*/
+/* line 13, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#map img {
+  max-width: none;
+}
+
+/* line 16, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#map label {
+  width: auto;
+  display: inline;
+}
+
+/* line 22, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin {
   max-width: 300px;
   padding: 19px 29px 29px;
@@ -8230,13 +8242,13 @@ body {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 26, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 36, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
   margin-bottom: 10px;
 }
 
-/* line 30, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 40, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin input[type="text"],
 .form-signin input[type="password"] {
   font-size: 16px;
@@ -8245,21 +8257,21 @@ body {
   padding: 7px 9px;
 }
 
-/* line 38, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 48, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .brand {
   text-shadow: none;
   color: #9D20AB;
 }
 
-/* line 43, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 53, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .nav > li > a {
   text-shadow: none;
 }
 
-/* line 47, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 57, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .sign_up {
   text-align: center;
 }
 ;
 FI"_version;
-F"%94b0c8d4b6412f705f4868c95dd68ee4
+F"%f25de23c8e101f78c7e74bf7597dbfa6

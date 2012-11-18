@@ -22,11 +22,13 @@ class EventsController < ApplicationController
 
    
   @events = Event.search(params[:search])
+  @json = @events.to_gmaps4rails
+
    #@events = Event.order(:title)
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @events }
+      format.json { render :json => @events }
     end
   end
 

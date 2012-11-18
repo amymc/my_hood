@@ -4,10 +4,11 @@
 	
 	$(document).ready(function () {
         var myOptions = {
-          center: new google.maps.LatLng(53.5, -7),
-          zoom: 4,
+          center: new google.maps.LatLng(53.3, -6.3),
+          zoom: 10,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
+        
 		
 		map = new google.maps.Map(document.getElementById("map"), myOptions);
     	
@@ -58,11 +59,20 @@
 		// To add the marker to the map set it up then call setMap();
 		var marker = new google.maps.Marker({
 		    position: yourLocation,
-		   map: map,
+		    map: map,
 		    title: 'You are here',
 		    icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/pink/blank.png',
-		   
+		    
 		});
+		
+			//taken from	https://developers.google.com/maps/documentation/javascript/events#EventListeners
+		google.maps.event.addListener(map, 'center_changed', function() {
+    // 3 seconds after the center of the map has changed, pan back to the
+    // marker.
+    window.setTimeout(function() {
+      map.panTo(marker.getPosition());
+    });
+  })
 		
 		//var infowindow = new google.maps.InfoWindow({
 		//content:''

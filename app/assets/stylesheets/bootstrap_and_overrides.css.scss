@@ -9,6 +9,16 @@ body { padding-top: 60px; }
 	text-shadow:none;
 }
 
+/*---Fix the navigation at side of map---*/
+#map img { 
+  max-width: none;
+}
+#map label { 
+  width: auto; display:inline; 
+} 
+
+
+
 .form-signin {
         max-width: 300px;
         padding: 19px 29px 29px;

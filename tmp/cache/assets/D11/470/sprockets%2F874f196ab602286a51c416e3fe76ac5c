@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1352851775.6264288:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353240934.712734:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%94b0c8d4b6412f705f4868c95dd68ee4I"logical_path;
+F"%f25de23c8e101f78c7e74bf7597dbfa6I"logical_path;
 FI" bootstrap_and_overrides.css;
 FI"pathname;
 FI"B$root/app/assets/stylesheets/bootstrap_and_overrides.css.scss;
@@ -9,9 +9,9 @@ FI"content_type;
 FI"text/css;
 FI"
 mtime;
-FI"2012-11-14T00:09:27+00:00;
+FI"2012-11-18T11:44:57+00:00;
 FI"	body;
-FI"’Z/*
+FI"Ó[/*
  * Bootstrap v2.1.1
  *
  * Copyright 2012 Twitter, Inc
@@ -8226,7 +8226,19 @@ body {
   text-shadow: none;
 }
 
-/* line 12, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/*---Fix the navigation at side of map---*/
+/* line 13, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#map img {
+  max-width: none;
+}
+
+/* line 16, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#map label {
+  width: auto;
+  display: inline;
+}
+
+/* line 22, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin {
   max-width: 300px;
   padding: 19px 29px 29px;
@@ -8241,13 +8253,13 @@ body {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 26, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 36, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
   margin-bottom: 10px;
 }
 
-/* line 30, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 40, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin input[type="text"],
 .form-signin input[type="password"] {
   font-size: 16px;
@@ -8256,18 +8268,18 @@ body {
   padding: 7px 9px;
 }
 
-/* line 38, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 48, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .brand {
   text-shadow: none;
   color: #9D20AB;
 }
 
-/* line 43, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 53, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .nav > li > a {
   text-shadow: none;
 }
 
-/* line 47, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 57, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .sign_up {
   text-align: center;
 }
@@ -8279,9 +8291,9 @@ F[{I"	path;
 FI"B$root/app/assets/stylesheets/bootstrap_and_overrides.css.scss;
 FI"
 mtime;
-FIu:	Time¿)Ä  ∞%:@_zoneI"GMT;
+FIu:	TimeK*Ä  ê≥:@_zoneI"GMT;
 T:offseti I"hexdigest;
-F"%aecad97f9d80f498d8a9e2d0e830a368{I"	path;
+F"%4b1f31aea40fa93808899db510a0976e{I"	path;
 FI"s/Users/amymc/.rvm/gems/ruby-1.9.3-p194/gems/bootstrap-generators-2.1.1/vendor/assets/stylesheets/bootstrap.css;
 FI"
 mtime;

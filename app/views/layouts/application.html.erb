@@ -14,8 +14,10 @@
   
 
   <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "gmaps4rails" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= yield :head %>
 </head>
 <body>
   <div class="navbar navbar-fixed-top">
@@ -70,5 +72,6 @@
       <p>&copy; Amy McCarthy 2012</p>
     </footer>
   </div>
+  <%= yield :scripts %>
 </body>
 </html>

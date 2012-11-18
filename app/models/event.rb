@@ -1,4 +1,19 @@
 class Event < ActiveRecord::Base
+	#attr_accessible :location, :latitude, :longitude
+ 	geocoded_by :location
+ 	after_validation :geocode
+	acts_as_gmappable :process_geocoding => false
+	
+
+      def gmaps4rails_location
+          location
+      end
+       def gmaps4rails_infowindow
+         "<h4>#{title}</h4>" << "<h4>#{location}</h4>"
+     end
+
+
+
 	def self.search(search)
 		if search
 			#events = Event.find_all_by_description (params[:search])
