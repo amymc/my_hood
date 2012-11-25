@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353240934.712734:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353858132.782654:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%f25de23c8e101f78c7e74bf7597dbfa6I"logical_path;
+F"%b3ccfb20d59f75a51378accacb50bd7eI"logical_path;
 FI" bootstrap_and_overrides.css;
 FI"pathname;
 FI"B$root/app/assets/stylesheets/bootstrap_and_overrides.css.scss;
@@ -9,9 +9,9 @@ FI"content_type;
 FI"text/css;
 FI"
 mtime;
-FI"2012-11-18T11:44:57+00:00;
+FI"2012-11-25T15:42:00+00:00;
 FI"	body;
-FI"Ó[/*
+FI"†]/*
  * Bootstrap v2.1.1
  *
  * Copyright 2012 Twitter, Inc
@@ -8238,6 +8238,7 @@ body {
   display: inline;
 }
 
+/*taken from the bootstrap website*/
 /* line 22, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin {
   max-width: 300px;
@@ -8283,6 +8284,25 @@ body {
 .sign_up {
   text-align: center;
 }
+
+/* line 61, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 65, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px;
+}
+
+/* line 72, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#push,
+#footer {
+  height: 60px;
+}
 ;
 FI"asset_paths;
 F[I"B$root/app/assets/stylesheets/bootstrap_and_overrides.css.scss;
@@ -8291,9 +8311,9 @@ F[{I"	path;
 FI"B$root/app/assets/stylesheets/bootstrap_and_overrides.css.scss;
 FI"
 mtime;
-FIu:	TimeK*Ä  ê≥:@_zoneI"GMT;
+FIu:	Time/+Ä   ®:@_zoneI"GMT;
 T:offseti I"hexdigest;
-F"%4b1f31aea40fa93808899db510a0976e{I"	path;
+F"%7ada1002588d12d160f8be35a0656f54{I"	path;
 FI"s/Users/amymc/.rvm/gems/ruby-1.9.3-p194/gems/bootstrap-generators-2.1.1/vendor/assets/stylesheets/bootstrap.css;
 FI"
 mtime;

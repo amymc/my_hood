@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353249246.788139:@value{	I"length:EFi¯ÄI"digest;
-F"%1e282ff2682443d1a09d7bedd6edf53aI"source;
-FI"¯Ä/*!
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353773351.850184:@value{	I"length:EFi{ÆI"digest;
+F"%ee5721c0a90c956db74434abe8b80a69I"source;
+FI"{Æ/*!
  * jQuery JavaScript Library v1.8.2
  * http://jquery.com/
  *
@@ -11980,15 +11980,15 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
       this.default_map_options = {
         id: 'map',
         draggable: true,
-        detect_location: false,
+        detect_location: true,
         center_on_user: false,
         center_latitude: 0,
         center_longitude: 0,
-        zoom: 7,
+        zoom: 15,
         maxZoom: null,
         minZoom: null,
         auto_adjust: true,
-        auto_zoom: true,
+        auto_zoom: false,
         bounds: [],
         raw: {}
       };
@@ -12874,7 +12874,7 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 	    if (err.code == 1) {
 	        error('The user denied the request for location information.')
 	    } else if (err.code == 2) {
-	        error('Your location information is unavailable.')
+	        error("Unable to detect your location. Search our events listing instead")
 	    } else if (err.code == 3) {
 	        error('The request to get your location timed out.')
 	    } else {
@@ -12898,24 +12898,35 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
         	center: yourLocation
     	}
     	map = new google.maps.Map(document.getElementById("map"), myOptions);
+    	//Gmaps.map.addMarkers(@events);
+	
+	//$.getJSON("/events.json", {}, function(json){
+			//$.each(json, function(i,item){
+				//$("#markers").append('<li><a href="#" rel="' + i + '">' + item.event.title + '</a></li>');
+				//var marker = new google.maps.Marker({
+					//position: new google.maps.LatLng(item.event.latitude, item.event.longitude),
+					//map: map,
+				//title: item.event.title
+			//});
 
-		// To add the marker to the map set it up then call setMap();
-		var marker = new google.maps.Marker({
-		    position: yourLocation,
-		    map: map,
-		    title: 'You are here',
-		    icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/pink/blank.png',
+
+
+		//To add the marker to the map set it up then call setMap();
+		   var marker = new google.maps.Marker({
+	       position: yourLocation,
+		   map: map,
+		   title: 'You are here',
+		   icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/pink/blank.png',
 		    
 		});
 		
-			//taken from	https://developers.google.com/maps/documentation/javascript/events#EventListeners
+			//taken from https://developers.google.com/maps/documentation/javascript/events#EventListeners
+			//when browser window is resized the map stays centred on the location marker
 		google.maps.event.addListener(map, 'center_changed', function() {
-    // 3 seconds after the center of the map has changed, pan back to the
-    // marker.
-    window.setTimeout(function() {
-      map.panTo(marker.getPosition());
-    });
-  })
+    	window.setTimeout(function() {
+     	map.panTo(marker.getPosition());
+   		});
+  	})
 		
 		//var infowindow = new google.maps.InfoWindow({
 		//content:''
@@ -12941,7 +12952,7 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 	        } else {
 	            error("Reverse Geocoding failed due to: " + status);
 	        }
-	    });
+	   });
 	}
 
 	function error(msg) {
@@ -12949,6 +12960,11 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 	}
 
 ;
+(function() {
+
+
+
+}).call(this);
 (function() {
 
 
@@ -12969,4 +12985,4 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 ;
 ;
 TI"_version;
-F"%110b98952452a285a05dab887439d80c
+F"%718e3659e36c14eafbc68aff21c0c6d1

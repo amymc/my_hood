@@ -1,5 +1,29 @@
-<h1>New event</h1>
 
-<%= render 'form' %>
+<html>
+<head>
+</head>
 
-<%= link_to 'Back', events_path %>
+<body>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<button class ="btn btn-inverse" id="go">Locate me!</button>
+			<br/><br/>
+			
+			<div id="map"><%= gmaps4rails(@json) %>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+<script type="text/javascript"
+src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<%= javascript_include_tag :all %>
+<%= stylesheet_link_tag :all %>
+ 
+ <script type="text/javascript src="http://code.jquery.com/jquery-1.7.1.js"></script>
+ <script src="gears_init.js"></script>
+<script src="geo.js"></script>
+</html>

@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353248902.655683:@value{	I"length:EFiÈI"digest;
-F"%926398a5c6dbcddd617cf87dbe889359I"source;
-FI"È
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353773351.371383:@value{	I"length:EFisI"digest;
+F"%4ed6921474a21aea428c7f59f49d4b68I"source;
+FI"s
 	// Google Maps global map variable
 	var map;
 	
@@ -33,7 +33,7 @@ FI"È
 	    if (err.code == 1) {
 	        error('The user denied the request for location information.')
 	    } else if (err.code == 2) {
-	        error('Your location information is unavailable.')
+	        error("Unable to detect your location. Search our events listing instead")
 	    } else if (err.code == 3) {
 	        error('The request to get your location timed out.')
 	    } else {
@@ -57,24 +57,35 @@ FI"È
         	center: yourLocation
     	}
     	map = new google.maps.Map(document.getElementById("map"), myOptions);
+    	//Gmaps.map.addMarkers(@events);
+	
+	//$.getJSON("/events.json", {}, function(json){
+			//$.each(json, function(i,item){
+				//$("#markers").append('<li><a href="#" rel="' + i + '">' + item.event.title + '</a></li>');
+				//var marker = new google.maps.Marker({
+					//position: new google.maps.LatLng(item.event.latitude, item.event.longitude),
+					//map: map,
+				//title: item.event.title
+			//});
 
-		// To add the marker to the map set it up then call setMap();
-		var marker = new google.maps.Marker({
-		    position: yourLocation,
-		    map: map,
-		    title: 'You are here',
-		    icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/pink/blank.png',
+
+
+		//To add the marker to the map set it up then call setMap();
+		   var marker = new google.maps.Marker({
+	       position: yourLocation,
+		   map: map,
+		   title: 'You are here',
+		   icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/pink/blank.png',
 		    
 		});
 		
-			//taken from	https://developers.google.com/maps/documentation/javascript/events#EventListeners
+			//taken from https://developers.google.com/maps/documentation/javascript/events#EventListeners
+			//when browser window is resized the map stays centred on the location marker
 		google.maps.event.addListener(map, 'center_changed', function() {
-    // 3 seconds after the center of the map has changed, pan back to the
-    // marker.
-    window.setTimeout(function() {
-      map.panTo(marker.getPosition());
-    });
-  })
+    	window.setTimeout(function() {
+     	map.panTo(marker.getPosition());
+   		});
+  	})
 		
 		//var infowindow = new google.maps.InfoWindow({
 		//content:''
@@ -100,7 +111,7 @@ FI"È
 	        } else {
 	            error("Reverse Geocoding failed due to: " + status);
 	        }
-	    });
+	   });
 	}
 
 	function error(msg) {
@@ -110,4 +121,4 @@ FI"È
 ;
 ;
 FI"_version;
-F"%3b9b7eb4a705cb8b20536fb5e02a6fd7
+F"%2c0712b20b25883b0d55b0791b811055

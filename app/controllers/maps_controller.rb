@@ -31,11 +31,11 @@ class MapsController < ApplicationController
   # GET /maps/new
   # GET /maps/new.json
   def new
-    @map = Map.new
+    @map = Map.all
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @map }
+      format.json { render json: @maps }
     end
   end
 

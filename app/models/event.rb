@@ -1,4 +1,5 @@
 class Event < ActiveRecord::Base
+	belongs_to :maps
 	#attr_accessible :location, :latitude, :longitude
  	geocoded_by :location
  	after_validation :geocode

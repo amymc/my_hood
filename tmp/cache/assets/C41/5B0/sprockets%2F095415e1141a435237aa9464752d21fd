@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353242838.670043:@value{	I"length:EFi7hI"digest;
-F"%f91a75c459b05c94115480bfff02ab46I"source;
-FI"7h/*
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353858133.0797892:@value{	I"length:EFiéiI"digest;
+F"%5796da1896cd26a00d7d5137e1a213d0I"source;
+FI"éi/*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
@@ -8245,6 +8245,7 @@ body {
   display: inline;
 }
 
+/*taken from the bootstrap website*/
 /* line 22, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin {
   max-width: 300px;
@@ -8289,6 +8290,25 @@ body {
 /* line 57, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .sign_up {
   text-align: center;
+}
+
+/* line 61, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 65, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px;
+}
+
+/* line 72, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#push,
+#footer {
+  height: 60px;
 }
 .map_container {
   padding: 6px;
@@ -8401,4 +8421,4 @@ div.field, div.actions {
 }
 ;
 FI"_version;
-F"%5a91c59ea84c10881358c0a469642fbc
+F"%3dce86dd5c84120cdc8a77e3c26cddf4

@@ -1,16 +1,3 @@
-module COMMON
-	module SEARCH
-		def search
-		  @events = Event.search(params[:search])
-		  redirect_to @events
-		end 
-	end	
-
-	def self.included(base)
-    	base.extend(SEARCH)
-  	end
-end
-
 class EventsController < ApplicationController
   #GET /events
   #GET /events.json
@@ -36,10 +23,12 @@ class EventsController < ApplicationController
   # GET /events/1.json
   def show
     @event = Event.find(params[:id])
+    @json = @events.to_gmaps4rails
+
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @event }
+      format.json { render :json => @events }
     end
   end
 

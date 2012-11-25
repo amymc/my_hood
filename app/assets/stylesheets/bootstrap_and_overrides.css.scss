@@ -18,7 +18,7 @@ body { padding-top: 60px; }
 } 
 
 
-
+/*taken from the bootstrap website*/
 .form-signin {
         max-width: 300px;
         padding: 19px 29px 29px;
@@ -58,5 +58,19 @@ text-shadow:none;
 text-align:center;
 }	
 
+html,body{
+    height: 100%
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
+}
+#push,
+#footer {
+    height: 60px;
+}
 
 	

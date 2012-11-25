@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353242838.868376:@value{	I"length:EFiî[I"digest;
-F"%f8dea40e8c44a2dda156467a06b7ad84I"source;
-FI"î[/*
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353858132.985516:@value{	I"length:EFi ]I"digest;
+F"%032c7da9ac015b126439dedeebc3ef8aI"source;
+FI" ]/*
  * Bootstrap v2.1.1
  *
  * Copyright 2012 Twitter, Inc
@@ -8227,6 +8227,7 @@ body {
   display: inline;
 }
 
+/*taken from the bootstrap website*/
 /* line 22, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin {
   max-width: 300px;
@@ -8272,6 +8273,25 @@ body {
 .sign_up {
   text-align: center;
 }
+
+/* line 61, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 65, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px;
+}
+
+/* line 72, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#push,
+#footer {
+  height: 60px;
+}
 ;
 FI"_version;
-F"%f25de23c8e101f78c7e74bf7597dbfa6
+F"%b3ccfb20d59f75a51378accacb50bd7e

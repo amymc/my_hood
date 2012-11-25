@@ -140,6 +140,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby (~> 3.0.0)
   bootstrap
   bootstrap-generators (~> 2.1)
   bootstrap-sass

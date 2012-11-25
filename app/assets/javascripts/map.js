@@ -31,7 +31,7 @@
 	    if (err.code == 1) {
 	        error('The user denied the request for location information.')
 	    } else if (err.code == 2) {
-	        error('Your location information is unavailable.')
+	        error("Unable to detect your location. Search our events listing instead")
 	    } else if (err.code == 3) {
 	        error('The request to get your location timed out.')
 	    } else {
@@ -55,24 +55,35 @@
         	center: yourLocation
     	}
     	map = new google.maps.Map(document.getElementById("map"), myOptions);
+    	//Gmaps.map.addMarkers(@events);
+	
+	//$.getJSON("/events.json", {}, function(json){
+			//$.each(json, function(i,item){
+				//$("#markers").append('<li><a href="#" rel="' + i + '">' + item.event.title + '</a></li>');
+				//var marker = new google.maps.Marker({
+					//position: new google.maps.LatLng(item.event.latitude, item.event.longitude),
+					//map: map,
+				//title: item.event.title
+			//});
 
-		// To add the marker to the map set it up then call setMap();
-		var marker = new google.maps.Marker({
-		    position: yourLocation,
-		    map: map,
-		    title: 'You are here',
-		    icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/pink/blank.png',
+
+
+		//To add the marker to the map set it up then call setMap();
+		   var marker = new google.maps.Marker({
+	       position: yourLocation,
+		   map: map,
+		   title: 'You are here',
+		   icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/pink/blank.png',
 		    
 		});
 		
-			//taken from	https://developers.google.com/maps/documentation/javascript/events#EventListeners
+			//taken from https://developers.google.com/maps/documentation/javascript/events#EventListeners
+			//when browser window is resized the map stays centred on the location marker
 		google.maps.event.addListener(map, 'center_changed', function() {
-    // 3 seconds after the center of the map has changed, pan back to the
-    // marker.
-    window.setTimeout(function() {
-      map.panTo(marker.getPosition());
-    });
-  })
+    	window.setTimeout(function() {
+     	map.panTo(marker.getPosition());
+   		});
+  	})
 		
 		//var infowindow = new google.maps.InfoWindow({
 		//content:''
@@ -98,7 +109,7 @@
 	        } else {
 	            error("Reverse Geocoding failed due to: " + status);
 	        }
-	    });
+	   });
 	}
 
 	function error(msg) {
