@@ -1,6 +1,24 @@
-<h1>Editing event</h1>
+<%#=Using simple_form gem - less code required as the gem automatically creates a _form partial %>
+<%= simple_form_for @event, :html => { :multipart => true, :class => 'form-signin' } do |f|%>
+	<fieldset>
+ 	<% if @event.errors.any? %>
+   		<div class="alert alert-error fade in"">
+          	<%= "Oh no!"%>  
+    	</div>
+    <% end %>
+	<h2 class="form-signin-heading"> Edit event</h2>
 
-<%= render 'form' %>
+<%= f.input :title %>
+<%#=':as => :text'  a text area instead of text field  %>
+    <%= f.input :description, :as => :text, :input_html => { :cols => 50, :rows => 7 }%>
+    <%= f.input :price %>
+    <%= f.input :date %>
+	<%= f.input :location %>
+	<%= f.file_field :image %>
+    <%= f.input :genre %>            
+    <%= f.button :submit 
+    submit_tag "update event", :class => 'btn btn-primary'%>
+    </fieldset>
+<% end %>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+

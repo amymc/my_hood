@@ -22,7 +22,13 @@ gem 'bootstrap-generators', '~> 2.1'
 
 gem 'railties'
 
+
+gem 'carrierwave'
+
 gem 'gmaps4rails'
+
+#authorisation gem - restricts access
+gem "cancan"
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'

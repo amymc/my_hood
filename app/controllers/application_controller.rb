@@ -9,20 +9,16 @@ class ApplicationController < ActionController::Base
 	   	def current_user
     		@current_user ||= User.find(session[:user_id]) if session[:user_id]
   		end
-
-  		
-
-	 
-		def search_events
-  			@events = Event.search(params[:search])
-  			@json = @events.to_gmaps4rails
+ 
+		#def search_events
+  		#	@events = Event.search(params[:search])
+  		#	@json = @events.to_gmaps4rails
 
 
-   			respond_to do |format|
-      		format.html # index.html.erb
-      		format.json { render :json => @events }
-    	end
+   		#	respond_to do |format|
+      	#	format.html # index.html.erb
+      	#	format.json { render :json => @events }
+    	#end
 	  
-		
-end
+	
 end

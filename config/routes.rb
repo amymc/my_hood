@@ -7,13 +7,6 @@ Myhood::Application.routes.draw do
   
   resources :sessions
   
- # controller :sessions do 
-  #	 get "logout" => "sessions#destroy", :as => "logout"
- #	 get "login" => :new
- #	 post "login" => :create
- #	 delete "logout" => :destroy
- 	  #	 get "signup" => "users#new", :as => "signup"
-# end	 
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -21,7 +14,9 @@ Myhood::Application.routes.draw do
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
-  #match '/admin',  to: 'users#index'
+  match '/admin',  to: 'sessions#index'
+  match '/contact', to: 'maps#contact'
+  #match '/users',  to: 'users#authorize'
 
 	
   # Sample of named route:
@@ -68,7 +63,7 @@ Myhood::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
- root :to => 'events#new' 
+ root :to => 'maps#index' 
 
   # See how all your routes lay out with "rake routes"
 

@@ -1,34 +1,82 @@
-<h1></h1>
 
+  <% if current_user %>
+<div class="btn-group">
+<button class="btn btn-inverse">Admin</button>
+  <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"> 
+    <%#adds dropdown arrow%>
+    <span class="caret"></span>
+  </button>
+  
+  
+  <ul class="dropdown-menu">
+    <li>
+    	<a href="events/new">Add new event</a>
+  	</li>
+  	<li>
+  		<a href="users/new">create new user</a>
+  	</li>
+  </ul>
+</div>
+ <% end %>		
 
-<table class="table table-hover">
+	<div class="search">	
+	<%# input append ensures that the text box and the submit button are aligned%>
+	<div class="input-append">
+			<%# Puts the search box in the right hand side of the nav bar%>
+			<form class="navbar-search pull-right">
+			<%= form_tag events_path, :method => 'get' do %>
+  				<%= text_field_tag :search, params[:search] %>
+  				 <button type="submit" class="btn btn-info">
+   					 search <i class="icon-search"></i> 
+   				</button>
+			<% end %>
+			</form>
+ 	</div>
+ 	</div>
+ </ul>
+ <br/>
+  <br/>
+   <br/>
+       
+ 
+ <div class="listing">	
+ <%-#make each row a link to view the event-%>
+
+ <table class="table table-hover">
   <tr>
     <th>Title</th>
     <th>Description</th>
-    <th>Price</th>
     <th>Date</th>
-    <th>Area</th>
     <th>Genre</th>
-    <th>location</th>
-    <th>Latitude</th>
-    <th>Longitude</th>
-    <th></th>
+    <th>Location</th>
   </tr>
+<tbody>
 
-<% @events.each do |event| %>
+<%@events.each do |event| %>
+
   <tr>
+
+<%= link_to event do %>
     <td><%= event.title %></td>
     <td><%= event.description %></td>
-    <td><%= event.price %></td>
-    <td><%= event.date %></td>
-    <td><%= event.area %></td>
     <td><%= event.genre %></td>
+    <td><%= event.date %></td>
     <td><%= event.location %></td>
-    <td><%= event.latitude %></td>
-    <td><%= event.longitude %></td>
-  </tr>
+    <td><%= image_tag event.image_url.to_s %></td>
+    <td><%= link_to 'Show', event %></td>
+    <% if current_user %>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+    	<td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>  
 <% end %>
+
+  </tr>
+
+<% end %>
+  </tbody>
 </table>
+
+</div>
 <br/>
 <br/>
 <br/>

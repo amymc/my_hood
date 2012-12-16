@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353858133.0797892:@value{	I"length:EFiéiI"digest;
-F"%5796da1896cd26a00d7d5137e1a213d0I"source;
-FI"éi/*
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1355692817.742553:@value{	I"length:EFiÁnI"digest;
+F"%1b7986a9b12ed387bc44d2e2f6dab8fbI"source;
+FI"Án/*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
@@ -8227,26 +8227,82 @@ body {
     overflow: visible !important;
   }
 }
-/* line 7, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 5, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#login {
+  color: white;
+}
+
+/* line 9, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.listing {
+  clear: both;
+}
+
+/* line 13, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.event_item {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  float: left;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #9D20AB;
+}
+
+/*---Map infowindows----*/
+/* line 26, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#info {
+  width: 50px;
+}
+
+/* line 30, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#description {
+  text-align: justify;
+}
+
+/* line 34, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#box {
+  background-color: white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+/* line 46, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar {
   color: black;
   text-shadow: none;
 }
 
+/* line 51, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.search {
+  float: right;
+}
+
 /*---Fix the navigation at side of map---*/
-/* line 13, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 56, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #map img {
   max-width: none;
 }
 
-/* line 16, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 59, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #map label {
   width: auto;
   display: inline;
 }
 
+/* line 63, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.btn-group {
+  float: left;
+}
+
 /*taken from the bootstrap website*/
-/* line 22, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 69, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin {
   max-width: 300px;
   padding: 19px 29px 29px;
@@ -8261,13 +8317,13 @@ body {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 36, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 83, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
   margin-bottom: 10px;
 }
 
-/* line 40, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 87, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin input[type="text"],
 .form-signin input[type="password"] {
   font-size: 16px;
@@ -8276,28 +8332,28 @@ body {
   padding: 7px 9px;
 }
 
-/* line 48, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 95, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .brand {
   text-shadow: none;
   color: #9D20AB;
 }
 
-/* line 53, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 100, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .nav > li > a {
   text-shadow: none;
 }
 
-/* line 57, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 104, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .sign_up {
   text-align: center;
 }
 
-/* line 61, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 108, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 html, body {
   height: 100%;
 }
 
-/* line 65, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 112, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #wrap {
   min-height: 100%;
   height: auto !important;
@@ -8305,7 +8361,7 @@ html, body {
   margin: 0 auto -60px;
 }
 
-/* line 72, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 119, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #push,
 #footer {
   height: 60px;
@@ -8318,11 +8374,11 @@ html, body {
   -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
   -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
   box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
-  width: 800px;
+  width: 700px;
 }
 
 .gmaps4rails_map {
-  width: 800px;
+  width: 700px;
   height: 400px;
 }
 
@@ -8421,4 +8477,4 @@ div.field, div.actions {
 }
 ;
 FI"_version;
-F"%3dce86dd5c84120cdc8a77e3c26cddf4
+F"%295b03cefc054e014cc5afb4a47e1f20

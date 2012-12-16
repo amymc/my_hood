@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121116012723) do
+ActiveRecord::Schema.define(:version => 20121201204218) do
 
   create_table "events", :force => true do |t|
     t.string   "title"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20121116012723) do
     t.string   "area"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "image"
   end
 
   create_table "maps", :force => true do |t|

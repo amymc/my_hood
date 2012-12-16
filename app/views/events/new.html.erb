@@ -1,29 +1,22 @@
-
-<html>
-<head>
-</head>
-
-<body>
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span12">
-			<button class ="btn btn-inverse" id="go">Locate me!</button>
-			<br/><br/>
-			
-			<div id="map"><%= gmaps4rails(@json) %>
-</div>
-			</div>
-		</div>
-	</div>
-</div>
-</body>
-
-<script type="text/javascript"
-src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<%= javascript_include_tag :all %>
-<%= stylesheet_link_tag :all %>
- 
- <script type="text/javascript src="http://code.jquery.com/jquery-1.7.1.js"></script>
- <script src="gears_init.js"></script>
-<script src="geo.js"></script>
-</html>
+<%#=Using simple_form gem - less code required as the gem automatically creates a _form partial %>
+<%#=multipart=>true allows for the file upload i.e. attaching an image %>
+<%= simple_form_for @event, :html => { :multipart => true, :class => 'form-horizontal' } do |f|%>
+	<fieldset>
+ 	<% if @event.errors.any? %>
+   		<div class="alert alert-error fade in"">
+          	<%= "Oh no!"%>  
+    	</div>
+    <% end %>
+	<h2 class="form-signin-heading">create new event</h2>
+    <%= f.input :title %>
+     <%#=':as => :text'  a text area instead of text field  %>
+    <%= f.input :description, :as => :text, :input_html => { :cols => 50, :rows => 7 }%>
+    <%= f.input :price %>
+    <%= f.input :date %>
+	<%= f.input :location %>
+	<%= f.file_field :image %>
+    <%= f.input :genre %>
+    <%= f.button :submit 
+    submit_tag "create new event", :class => 'btn btn-primary'%>
+    </fieldset>
+<% end %>

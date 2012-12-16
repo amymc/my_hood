@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+# before_filter :authorize, :only => [:edit, :new]
+
   #GET /events
   #GET /events.json
   def index
@@ -23,7 +25,7 @@ class EventsController < ApplicationController
   # GET /events/1.json
   def show
     @event = Event.find(params[:id])
-    @json = @events.to_gmaps4rails
+    #@json = @events.to_gmaps4rails
 
 
     respond_to do |format|
@@ -91,4 +93,14 @@ class EventsController < ApplicationController
       format.json { head :ok }
     end
   end
+  
+  protected
+  
+  def authorize
+   unless User.find_by_id(session[:user_id])
+   	redirect_to events_url, :notice => "access denied"
+   end	
+  end 
+
+
 end

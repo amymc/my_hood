@@ -87,4 +87,7 @@ class MapsController < ApplicationController
       format.json { head :ok }
     end
   end
+  
+  def contact
+  end
 end

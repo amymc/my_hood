@@ -85,9 +85,9 @@
    		});
   	})
 		
-		//var infowindow = new google.maps.InfoWindow({
-		//content:''
-		//});
+		var infowindow = new google.maps.InfoWindow({
+		content:'i heart mx'
+		});
 		
 		// Adding a click event to the marker
 		google.maps.event.addListener(marker, 'click', function() {

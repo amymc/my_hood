@@ -4,15 +4,18 @@ class Event < ActiveRecord::Base
  	geocoded_by :location
  	after_validation :geocode
 	acts_as_gmappable :process_geocoding => false
+	#adding the image uploader
+	mount_uploader :image, ImageUploader
 	
 
       def gmaps4rails_location
           location
       end
-       def gmaps4rails_infowindow
-         "<h4>#{title}</h4>" << "<h4>#{location}</h4>"
+      
+     #adds infowindow which displays title and location of event and links to event show page
+     def gmaps4rails_infowindow
+          "<a href = '/events/#{id}'>#{title} <br/> #{location}</a>"
      end
-
 
 
 	def self.search(search)
@@ -21,7 +24,7 @@ class Event < ActiveRecord::Base
 			#find(:all,:conditions => ['title LIKE ?', "%#{search}%"])
 
   
-			find(:all,:conditions => ['title LIKE :search OR description LIKE :search OR area LIKE :search OR genre LIKE :search ', {:search =>"%#{search}%"}])
+			find(:all,:conditions => ['title LIKE :search OR description LIKE :search OR location LIKE :search OR genre LIKE :search ', {:search =>"%#{search}%"}])
 			#All.where('title <=? LIKE ?', "%#{ search_query}%"])
 		#event = Event.where(params[:search])
 			#Event.where("title like ?", params[:search]+"%")
