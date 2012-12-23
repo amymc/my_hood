@@ -81,20 +81,14 @@
 </div>
 
 
-<% @events.each do |event| %>
-  <% event.nearbys(5).each do |near_event| %>
-    <li><%= link_to near_event.location, near_event %> (<%= near_event.distance.round(1) %> miles)</li>
-  <% end %>
-<% end %>
 
 
-  <% link_to Event.near ("paris, france")%>
     
 
 <h1><%= @events.size %> events found within your search radius</h1>
 <ol>
 <% @events.each do |event| %>
-<li><%#= Event.near(yourLocation.latitude, yourLocation.longitude) %><br/></li>
+<li><%= event.title %><br/></li>
 <% end %>
 </ol>
 

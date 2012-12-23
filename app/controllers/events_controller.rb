@@ -7,10 +7,15 @@ class EventsController < ApplicationController
  
   #@search = Event.search(params[:search])  
  # @events = @search.all  
- @events = Event.near('Paris, France', 20)
+ @events = Event.near('Dublin, Ireland', 20)
 
+
+#if User.find(current_user)
+ #   @user = User.find(current_user)
+ #   @locations = Location.near(params[:latitude => @user.latitude, :longitude => @user.longitude], 50, :order => :distance)
+ # end
    
-  @events = Event.search(params[:search])
+ # @events = Event.search(params[:search])
   @json = @events.to_gmaps4rails
  # @center = yourLocation.to_gmaps4rails
 
