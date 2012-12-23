@@ -1,7 +1,7 @@
 
 	// Google Maps global map variable
 	var map;
-	
+
 	$(document).ready(function () {
         var myOptions = {
           center: new google.maps.LatLng(53.3, -6.3),
@@ -9,7 +9,7 @@
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         
-		
+
 		map = new google.maps.Map(document.getElementById("map"), myOptions);
     	
 	    $('#go').click(function () {
@@ -46,8 +46,8 @@
 
 	    // Change coordinates into a location 
 	    var yourLocation = new google.maps.LatLng(latitude, longitude);
-	
-	
+
+
 		//Setup map and position on map
     	var myOptions = {
         	zoom: 15,
@@ -56,7 +56,7 @@
     	}
     	map = new google.maps.Map(document.getElementById("map"), myOptions);
     	//Gmaps.map.addMarkers(@events);
-	
+
 	//$.getJSON("/events.json", {}, function(json){
 			//$.each(json, function(i,item){
 				//$("#markers").append('<li><a href="#" rel="' + i + '">' + item.event.title + '</a></li>');
@@ -74,9 +74,9 @@
 		   map: map,
 		   title: 'You are here',
 		   icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/pink/blank.png',
-		    
+
 		});
-		
+
 			//taken from https://developers.google.com/maps/documentation/javascript/events#EventListeners
 			//when browser window is resized the map stays centred on the location marker
 		google.maps.event.addListener(map, 'center_changed', function() {
@@ -84,17 +84,17 @@
      	map.panTo(marker.getPosition());
    		});
   	})
-		
+
 		var infowindow = new google.maps.InfoWindow({
 		content:'i heart mx'
 		});
-		
+
 		// Adding a click event to the marker
 		google.maps.event.addListener(marker, 'click', function() {
 		// Calling the open method of the infoWindow
 		infowindow.open(map, marker);
 		});
-			
+
 		marker.setMap(map);
 
 	    // Use Google maps to find out about the location

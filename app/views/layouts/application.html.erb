@@ -21,6 +21,8 @@
   <%= yield :head %>
 </head>
 <body>
+
+  <div id="wrap">
   <div class="navbar navbar-fixed-top">
  	<div class="navbar navbar-inverse">
     	<div class="navbar-inner">
@@ -57,14 +59,16 @@
       <% end %>
     <% end %>
     <%= yield %>
-    <div id="push"></div>
+    
   </div>
-  <hr/>
-  
+
+       <div id="push"></div>
+    </div>
   <div id="footer">
+    <hr/>
       <p>&copy; Amy McCarthy 2012</p>
   </div>
-  </div>
+
   <%= yield :scripts %>
 </body>
 </html>

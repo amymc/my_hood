@@ -9,7 +9,8 @@ class MapsController < ApplicationController
   	#else
     #	@locations = Location.all
   	#end
-
+  	
+	 # @json = @events.to_gmaps4rails
 
     respond_to do |format|
       format.html # index.html.erb

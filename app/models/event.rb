@@ -16,6 +16,10 @@ class Event < ActiveRecord::Base
      def gmaps4rails_infowindow
           "<a href = '/events/#{id}'>#{title} <br/> #{location}</a>"
      end
+     
+     def index
+     	yourLocation.nearbys(1)
+     end
 
 
 	def self.search(search)

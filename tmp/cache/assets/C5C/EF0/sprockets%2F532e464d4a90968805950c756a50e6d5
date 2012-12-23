@@ -1,9 +1,9 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353773351.371383:@value{	I"length:EFisI"digest;
-F"%4ed6921474a21aea428c7f59f49d4b68I"source;
-FI"s
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1356198660.857217:@value{	I"length:EFibI"digest;
+F"%1dfedacf02f678ea7c20c351f5210aeeI"source;
+FI"b
 	// Google Maps global map variable
 	var map;
-	
+
 	$(document).ready(function () {
         var myOptions = {
           center: new google.maps.LatLng(53.3, -6.3),
@@ -11,7 +11,7 @@ FI"s
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         
-		
+
 		map = new google.maps.Map(document.getElementById("map"), myOptions);
     	
 	    $('#go').click(function () {
@@ -48,8 +48,8 @@ FI"s
 
 	    // Change coordinates into a location 
 	    var yourLocation = new google.maps.LatLng(latitude, longitude);
-	
-	
+
+
 		//Setup map and position on map
     	var myOptions = {
         	zoom: 15,
@@ -58,7 +58,7 @@ FI"s
     	}
     	map = new google.maps.Map(document.getElementById("map"), myOptions);
     	//Gmaps.map.addMarkers(@events);
-	
+
 	//$.getJSON("/events.json", {}, function(json){
 			//$.each(json, function(i,item){
 				//$("#markers").append('<li><a href="#" rel="' + i + '">' + item.event.title + '</a></li>');
@@ -76,9 +76,9 @@ FI"s
 		   map: map,
 		   title: 'You are here',
 		   icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/pink/blank.png',
-		    
+
 		});
-		
+
 			//taken from https://developers.google.com/maps/documentation/javascript/events#EventListeners
 			//when browser window is resized the map stays centred on the location marker
 		google.maps.event.addListener(map, 'center_changed', function() {
@@ -86,17 +86,17 @@ FI"s
      	map.panTo(marker.getPosition());
    		});
   	})
-		
-		//var infowindow = new google.maps.InfoWindow({
-		//content:''
-		//});
-		
+
+		var infowindow = new google.maps.InfoWindow({
+		content:'i heart mx'
+		});
+
 		// Adding a click event to the marker
 		google.maps.event.addListener(marker, 'click', function() {
 		// Calling the open method of the infoWindow
 		infowindow.open(map, marker);
 		});
-			
+
 		marker.setMap(map);
 
 	    // Use Google maps to find out about the location
@@ -121,4 +121,4 @@ FI"s
 ;
 ;
 FI"_version;
-F"%2c0712b20b25883b0d55b0791b811055
+F"%37ebfea616d35becd13dd3ba6fe22761

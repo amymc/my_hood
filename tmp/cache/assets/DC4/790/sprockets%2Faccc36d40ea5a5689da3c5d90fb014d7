@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1355692591.56615:@value{	I"length:EFixbI"digest;
-F"%c8906d0277db87964c8911a881d714ddI"source;
-FI"xb/*
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1355781940.2751732:@value{	I"length:EFihI"digest;
+F"%9cbc0889542f079096a6aa3a6b85c667I"source;
+FI"h/*
  * Bootstrap v2.1.1
  *
  * Copyright 2012 Twitter, Inc
@@ -8209,22 +8209,62 @@ body {
     overflow: visible !important;
   }
 }
-/* line 5, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 6, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/*CSS to apply sticky footer at bottom of page - taken from http://twitter.github.com/bootstrap/examples/sticky-footer.html*/
+/* Wrapper for page content to push down footer */
+/* line 13, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+/* line 23, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#push,
+#footer {
+  height: 60px;
+}
+
+/* line 26, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#footer {
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  /* line 33, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+/* line 42, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #login {
   color: white;
 }
 
-/* line 9, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 46, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .listing {
   clear: both;
 }
 
-/* line 13, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 50, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .event_item {
   background-color: white;
   padding: 10px;
   text-align: center;
-  float: left;
   border-radius: 15px;
   -moz-border-radius: 15px;
   border-style: solid;
@@ -8232,18 +8272,30 @@ body {
   border-color: #9D20AB;
 }
 
+/* line 61, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#event_list {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #9D20AB;
+}
+
 /*---Map infowindows----*/
-/* line 26, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 73, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #info {
   width: 50px;
 }
 
-/* line 30, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 77, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #description {
   text-align: justify;
 }
 
-/* line 34, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 81, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #box {
   background-color: white;
   -webkit-border-radius: 4px;
@@ -8255,36 +8307,36 @@ body {
   text-align: center;
 }
 
-/* line 46, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 93, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar {
   color: black;
   text-shadow: none;
 }
 
-/* line 51, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 98, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .search {
   float: right;
 }
 
 /*---Fix the navigation at side of map---*/
-/* line 56, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 103, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #map img {
   max-width: none;
 }
 
-/* line 59, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 106, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #map label {
   width: auto;
   display: inline;
 }
 
-/* line 63, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 110, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .btn-group {
   float: left;
 }
 
 /*taken from the bootstrap website*/
-/* line 69, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 116, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin {
   max-width: 300px;
   padding: 19px 29px 29px;
@@ -8299,13 +8351,13 @@ body {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 83, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 130, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
   margin-bottom: 10px;
 }
 
-/* line 87, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 134, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin input[type="text"],
 .form-signin input[type="password"] {
   font-size: 16px;
@@ -8314,28 +8366,28 @@ body {
   padding: 7px 9px;
 }
 
-/* line 95, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 142, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .brand {
   text-shadow: none;
   color: #9D20AB;
 }
 
-/* line 100, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 147, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .nav > li > a {
   text-shadow: none;
 }
 
-/* line 104, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 151, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .sign_up {
   text-align: center;
 }
 
-/* line 108, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 155, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 html, body {
   height: 100%;
 }
 
-/* line 112, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 159, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #wrap {
   min-height: 100%;
   height: auto !important;
@@ -8343,11 +8395,11 @@ html, body {
   margin: 0 auto -60px;
 }
 
-/* line 119, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 166, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #push,
 #footer {
   height: 60px;
 }
 ;
 FI"_version;
-F"%a1d03006aa40c51818560f32a6497229
+F"%a4e1cf4171dca151a842fb31fe7fdf34

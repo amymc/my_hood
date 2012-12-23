@@ -40,9 +40,10 @@
        
  
  <div class="listing">	
- <%-#make each row a link to view the event-%>
-
+ 
+<div class="event_item">
  <table class="table table-hover">
+  <thead>
   <tr>
     <th>Title</th>
     <th>Description</th>
@@ -50,38 +51,64 @@
     <th>Genre</th>
     <th>Location</th>
   </tr>
+  </thead>
 <tbody>
 
 <%@events.each do |event| %>
 
-  <tr>
-
-<%= link_to event do %>
-    <td><%= event.title %></td>
+<tr>
+	<td><%= image_tag event.image_url.to_s %></td>
+    <td><%= link_to event.title, event %></td>
     <td><%= event.description %></td>
-    <td><%= event.genre %></td>
     <td><%= event.date %></td>
+    <td><%= event.genre %></td>  
     <td><%= event.location %></td>
-    <td><%= image_tag event.image_url.to_s %></td>
-    <td><%= link_to 'Show', event %></td>
+    
+
     <% if current_user %>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
     	<td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete %></td>
     <% end %>  
-<% end %>
 
   </tr>
+
 
 <% end %>
   </tbody>
 </table>
+  </div> 
 
 </div>
+
+
+<% @events.each do |event| %>
+  <% event.nearbys(5).each do |near_event| %>
+    <li><%= link_to near_event.location, near_event %> (<%= near_event.distance.round(1) %> miles)</li>
+  <% end %>
+<% end %>
+
+
+  <% link_to Event.near ("paris, france")%>
+    
+
+<h1><%= @events.size %> events found within your search radius</h1>
+<ol>
+<% @events.each do |event| %>
+<li><%#= Event.near(yourLocation.latitude, yourLocation.longitude) %><br/></li>
+<% end %>
+</ol>
+
+
 <br/>
 <br/>
 <br/>
 <br/>
-<div id="map"><%= gmaps4rails(@json) %></div>
+<div id="map"><%# gmaps4rails(@json) %><%#gmaps(:map_options => {:detect_location => true, :center_on_user => true })%>
+<%= gmaps( :map_options => {  :detect_location => true},
+           :markers     => { :data => @json } 
+         ) %>
+         </div>
+
 
 <%= javascript_include_tag :all %>
 <%= stylesheet_link_tag :all %>

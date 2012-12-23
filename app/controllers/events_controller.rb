@@ -7,11 +7,12 @@ class EventsController < ApplicationController
  
   #@search = Event.search(params[:search])  
  # @events = @search.all  
-
+ @events = Event.near('Paris, France', 20)
 
    
   @events = Event.search(params[:search])
   @json = @events.to_gmaps4rails
+ # @center = yourLocation.to_gmaps4rails
 
    #@events = Event.order(:title)
 
@@ -20,6 +21,41 @@ class EventsController < ApplicationController
       format.json { render :json => @events }
     end
   end
+  
+    def home
+  	#@events = Event.all
+  	
+  	
+    @events = events.near(params[:yourLocation], 0.2, :order => :distance)
+  	#else
+    #	@locations = Location.all
+  	#end
+  	
+	 # @json = @events.to_gmaps4rails
+
+ @events = Event.search(params[:search])
+  @json = @events.to_gmaps4rails
+  
+
+
+ 
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @events }
+    end
+  end
+  
+   def find_closest
+	@userLocation = MultiGeocoder.geocode(params[:userLocation])
+	if @userLocation.success
+	@events = Event.find(:all,
+		:origin => [@userLocation.lat, @userLocation.lng],
+		:conditions => ["distance < 0.5", params[:radius]],
+		:order=>'distance')
+		#@map = gmap4rails.new
+    end
+  end
+  
 
   # GET /events/1
   # GET /events/1.json

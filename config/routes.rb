@@ -16,6 +16,7 @@ Myhood::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
   match '/admin',  to: 'sessions#index'
   match '/contact', to: 'maps#contact'
+  match '/home', to: 'events#home'
   #match '/users',  to: 'users#authorize'
 
 	
@@ -63,7 +64,7 @@ Myhood::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
- root :to => 'maps#index' 
+ root :to => 'events#home' 
 
   # See how all your routes lay out with "rake routes"
 
