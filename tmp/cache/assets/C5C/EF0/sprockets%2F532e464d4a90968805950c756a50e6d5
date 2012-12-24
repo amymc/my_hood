@@ -1,8 +1,9 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1356198660.857217:@value{	I"length:EFibI"digest;
-F"%1dfedacf02f678ea7c20c351f5210aeeI"source;
-FI"b
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1356316903.093756:@value{	I"length:EFisI"digest;
+F"%7e9d24c169da07972556aaf9b34056baI"source;
+FI"s
 	// Google Maps global map variable
 	var map;
+	var yourLocation;
 
 	$(document).ready(function () {
         var myOptions = {
@@ -47,7 +48,7 @@ FI"b
 	    var geocoder = new google.maps.Geocoder();
 
 	    // Change coordinates into a location 
-	    var yourLocation = new google.maps.LatLng(latitude, longitude);
+	    yourLocation = new google.maps.LatLng(latitude, longitude);
 
 
 		//Setup map and position on map
@@ -113,6 +114,7 @@ FI"b
 	        }
 	   });
 	}
+	
 
 	function error(msg) {
 	    alert(msg);
@@ -121,4 +123,4 @@ FI"b
 ;
 ;
 FI"_version;
-F"%37ebfea616d35becd13dd3ba6fe22761
+F"%62ad6c4f52090225831e5598ee0ebcaa

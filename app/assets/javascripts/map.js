@@ -1,6 +1,7 @@
 
 	// Google Maps global map variable
 	var map;
+	var yourLocation;
 
 	$(document).ready(function () {
         var myOptions = {
@@ -45,7 +46,7 @@
 	    var geocoder = new google.maps.Geocoder();
 
 	    // Change coordinates into a location 
-	    var yourLocation = new google.maps.LatLng(latitude, longitude);
+	    yourLocation = new google.maps.LatLng(latitude, longitude);
 
 
 		//Setup map and position on map
@@ -111,6 +112,7 @@
 	        }
 	   });
 	}
+	
 
 	function error(msg) {
 	    alert(msg);

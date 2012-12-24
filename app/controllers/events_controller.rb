@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
 # before_filter :authorize, :only => [:edit, :new]
+respond_to :json
 
   #GET /events
   #GET /events.json
@@ -7,7 +8,11 @@ class EventsController < ApplicationController
  
   #@search = Event.search(params[:search])  
  # @events = @search.all  
- @events = Event.near('Dublin, Ireland', 20)
+ #@events = Event.near(userLocation.Lat,userLocation.Lng)
+ #@events = Event.nearbys(params[:yourLocation])
+ #respond_with @events
+#@events = Event.near(@userLocation)
+@events = Event.near([request.location.coordinates], 2)
 
 
 #if User.find(current_user)
@@ -15,23 +20,24 @@ class EventsController < ApplicationController
  #   @locations = Location.near(params[:latitude => @user.latitude, :longitude => @user.longitude], 50, :order => :distance)
  # end
    
- # @events = Event.search(params[:search])
-  @json = @events.to_gmaps4rails
+  #@events = Event.search(params[:search])
+# @events = Event.near(request.remote_ip, 2)
+ @json = @events.to_gmaps4rails
  # @center = yourLocation.to_gmaps4rails
 
    #@events = Event.order(:title)
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render :json => @events }
-    end
+   # respond_to do |format|
+   #   format.html # index.html.erb
+   #   format.json { render :json => @events }
+   # end
   end
   
     def home
   	#@events = Event.all
   	
   	
-    @events = events.near(params[:yourLocation], 0.2, :order => :distance)
+    #@events = events.near(params[:yourLocation], 0.2, :order => :distance)
   	#else
     #	@locations = Location.all
   	#end
