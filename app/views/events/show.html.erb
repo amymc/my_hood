@@ -2,7 +2,7 @@
 <div class=event_item>
 
 <p>
-  <%= image_tag @event.image_url.to_s %>
+  <%= image_tag (@event.image_url.to_s),:class =>"img-rounded", :size => "800x800"%>
 
 </p>
 
@@ -28,11 +28,13 @@
 
 
 <p>
-	</b><%= number_to_currency( @event.price, :unit => '&euro;') %>
+	
+	<%= number_to_currency( @event.price, :unit => '&euro;') %>
  
 </p>
 <% if current_user %>
-<%= link_to 'Edit', edit_event_path(@event) %> 
+		<%= button_to 'Edit', edit_event_path(@event), :method => :get, :class =>"btn btn-inverse"%>
+    	<%= button_to 'Delete',@event, :class => "btn btn-inverse", confirm: 'Are you sure?', method: :delete %></td>
  <% end %> 
 </div>
 

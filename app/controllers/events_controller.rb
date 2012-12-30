@@ -1,6 +1,10 @@
 class EventsController < ApplicationController
-# before_filter :authorize, :only => [:edit, :new]
+#applying authorization using the CanCan gem
+#ensures that only logged in users can access the edit/create pages
+load_and_authorize_resource
+
 respond_to :json
+respond_to :js
 
   #GET /events
   #GET /events.json
@@ -8,29 +12,32 @@ respond_to :json
  
   #@search = Event.search(params[:search])  
  # @events = @search.all  
- #@events = Event.near(userLocation.Lat,userLocation.Lng)
- #@events = Event.nearbys(params[:yourLocation])
+ #@events = Event.near(yourLocation)
+ #@events = Event.near(params[:yourLocation])
  #respond_with @events
-#@events = Event.near(@userLocation)
-@events = Event.near([request.location.coordinates], 2)
+#@events = Event.near(Gmaps.map.userLocation, 2)
+#@events = Event.near([request.location.coordinates], 2)
+#userLocation = params[:latitude], params[:longitude]
+@events = Event.nearbys
+#@events = @event.nearbys#(params[:latitude], params[:longitude],20)
+#@events = Event.near('Patricks Street, Dublin 8, Ireland', 2)
+#@events = Event.near(["53.3395715","-6.272263199999998"], 2)
+#@events = @nearest.nearbys(30)
 
 
-#if User.find(current_user)
- #   @user = User.find(current_user)
- #   @locations = Location.near(params[:latitude => @user.latitude, :longitude => @user.longitude], 50, :order => :distance)
- # end
    
-  #@events = Event.search(params[:search])
-# @events = Event.near(request.remote_ip, 2)
+ # @events = Event.search(params[:search])
+#@events = Event.near(params[:yourLocation], 2)
  @json = @events.to_gmaps4rails
  # @center = yourLocation.to_gmaps4rails
 
    #@events = Event.order(:title)
 
-   # respond_to do |format|
-   #   format.html # index.html.erb
-   #   format.json { render :json => @events }
-   # end
+   respond_to do |format|
+      format.html # index.html.erb
+      format.js {render json: @events, content_type: 'text/json' }
+      #format.json { render :json => @events }
+    end
   end
   
     def home
@@ -56,16 +63,7 @@ respond_to :json
     end
   end
   
-   def find_closest
-	@userLocation = MultiGeocoder.geocode(params[:userLocation])
-	if @userLocation.success
-	@events = Event.find(:all,
-		:origin => [@userLocation.lat, @userLocation.lng],
-		:conditions => ["distance < 0.5", params[:radius]],
-		:order=>'distance')
-		#@map = gmap4rails.new
-    end
-  end
+
   
 
   # GET /events/1
@@ -103,7 +101,7 @@ respond_to :json
     @event = Event.new(params[:event])
 
     respond_to do |format|
-      if @event.save
+     if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render json: @event, status: :created, location: @event }
       else
@@ -140,14 +138,7 @@ respond_to :json
       format.json { head :ok }
     end
   end
-  
-  protected
-  
-  def authorize
-   unless User.find_by_id(session[:user_id])
-   	redirect_to events_url, :notice => "access denied"
-   end	
-  end 
+
 
 
 end

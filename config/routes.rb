@@ -3,10 +3,17 @@ Myhood::Application.routes.draw do
 
   resources :maps
 
-  resources :events
+#post '/events' => 'events#create' 
+
+#post '/events/new' => 'events#create'
+
+#match 'events/new' => 'events#create', :via => :post
+  resources :events 
   
-  resources :sessions
+  resources :sessions  
   
+ post 'events/index' => 'events#index'
+ 
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

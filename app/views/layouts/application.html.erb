@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>What's happenin' in my 'hood?</title>
+  <%#=enables Bootstrap's responsive layout %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -14,7 +15,7 @@
 
   <%= stylesheet_link_tag    "application" %>
   <%= stylesheet_link_tag    "gmaps4rails" %>
-  <%= javascript_include_tag :default %>
+  <%#= javascript_include_tag :default %>
   <%= javascript_include_tag "application" %>
   
   <%= csrf_meta_tags %>
@@ -35,13 +36,32 @@
        			</a>
         
         		<%= link_to "What's happenin in my hood?", "/maps", :class => "brand" %>
+        		
         		<div class="nav-collapse">
           			<ul class="nav">
-            			<li><a href="/maps"><i class="icon-home"></i> Home</a></li>
+            			<li><a href="/maps"><i class="icon-home icon-white"></i> Home</a></li>
             			<li><a href="/events">Events</a></li>
             			<li><a href="/contact">Contact</a></li>
             			<%#displays username and logout link if the user is logged in%>
             			<% if current_user %>
+							<li class="dropdown">
+    							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+      								Admin
+      								<b class="caret"></b>
+    							</a>
+    							<ul class="dropdown-menu">
+      								<li>
+    									<a href="../events/new">Add new event</a>
+  									</li>
+  									<li>
+  										<a href="../users/new">create new user</a>
+  									</li>
+    							</ul>
+  							</li>
+					
+
+
+	
             				<li><%= link_to "Log Out", session_path("current"), method: "delete" %></li>
             				<li><div id="login">Logged in as <%= current_user.name %></div></li>
     					<% end %>
@@ -68,7 +88,6 @@
     <hr/>
       <p>&copy; Amy McCarthy 2012</p>
   </div>
-
 
 </body>
   <%= yield :scripts %>

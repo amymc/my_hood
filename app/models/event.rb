@@ -1,11 +1,15 @@
 class Event < ActiveRecord::Base
-	belongs_to :maps
+	#belongs_to :maps
 	attr_accessible :location, :latitude, :longitude
- 	geocoded_by :location, 
- 		:latitude => :lat, :longitude => :lng
- 
- 	after_validation :geocode
-	acts_as_gmappable #:process_geocoding => false #:lat => :lat, :lng => :lng
+	#attr_accessor :location
+ 	geocoded_by :location #:latitude, :longitude
+    reverse_geocoded_by :latitude, :longitude
+    #performs geocoding everytime a new event is added to the database or an address is updated
+ 	after_validation :geocode, :if => :location_changed?
+ 	# Gmaps4rails
+	acts_as_gmappable :process_geocoding => false #:lat => :lat, :lng => :lng
+	#validates fields in the 'edit' and 'create new' forms
+	validates_presence_of :title, :description, :location
 	#adding the image uploader
 	mount_uploader :image, ImageUploader
 	

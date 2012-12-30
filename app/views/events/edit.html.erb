@@ -1,23 +1,25 @@
 <%#=Using simple_form gem - less code required as the gem automatically creates a _form partial %>
+<%#=multipart=>true allows for the file upload i.e. attaching an image %>
 <%= simple_form_for @event, :html => { :multipart => true, :class => 'form-signin' } do |f|%>
 	<fieldset>
- 	<% if @event.errors.any? %>
+	<% if @event.errors.any? %>
    		<div class="alert alert-error fade in"">
-          	<%= "Oh no!"%>  
+          	<%= "Check out the errors below!"%>  
     	</div>
     <% end %>
+ 	
 	<h2 class="form-signin-heading"> Edit event</h2>
-
-<%= f.input :title %>
+<%#=The Simple Form gem puts an '*' by default.':required => false' removes it.%>
+<%= f.input :title, :required => false %>
 <%#=':as => :text'  a text area instead of text field  %>
-    <%= f.input :description, :as => :text, :input_html => { :cols => 50, :rows => 7 }%>
-    <%= f.input :price %>
+    <%= f.input :description,:required => false, :as => :text, :input_html => { :cols => 50, :rows => 7 }%>
+    <%= f.input :price, :required => false, :as => :text, :input_html => { :rows => 1 }%>
     <%= f.input :date %>
-	<%= f.input :location %>
+	<%= f.input :location, :required => false %>
 	<%= f.file_field :image %>
-    <%= f.input :genre %>            
+    <%= f.input :genre %>           
     <%= f.button :submit 
-    submit_tag "update event", :class => 'btn btn-primary'%>
+    submit_tag "update event", :class => 'btn btn-inverse'%>
     </fieldset>
 <% end %>
 

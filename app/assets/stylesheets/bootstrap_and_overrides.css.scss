@@ -2,6 +2,8 @@
 body { padding-top: 60px; }
 @import "bootstrap-responsive";
 
+
+
       html,
       body {
         height: 100%;
@@ -39,8 +41,25 @@ body { padding-top: 60px; }
       }
 
 
+
+
+/* 'logged in as <user>' display*/
 #login{
-	color:white;
+	color:#F0EDEE;
+	padding-top: 10px;
+	padding-left: 13px;
+}
+
+.btn btn-inverse.a {
+  color:white;
+  &:visited {
+    color: white;
+  }
+  &:hover {
+    color: #9D20AB;
+    text-decoration: none;
+    
+  }
 }
 
 .listing{
@@ -99,6 +118,8 @@ body { padding-top: 60px; }
 	float:right;
 }
 
+
+
 /*---Fix the navigation at side of map---*/
 #map img { 
   max-width: none;
@@ -115,13 +136,16 @@ body { padding-top: 60px; }
 /*taken from the bootstrap website*/
 .form-signin {
         max-width: 300px;
-        padding: 19px 29px 29px;
+        padding: 19px 29px 19px;
         margin: 0 auto 20px;
         background-color: #fff;
-        border: 1px solid #e5e5e5;
-        -webkit-border-radius: 5px;
-           -moz-border-radius: 5px;
-                border-radius: 5px;
+        /*text-align: center;*/
+		border-style:solid;
+		border-width:2px;
+		border-color:#9D20AB;
+        -webkit-border-radius: 15px;
+           -moz-border-radius: 15px;
+                border-radius: 15px;
         -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
            -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
                 box-shadow: 0 1px 2px rgba(0,0,0,.05);
@@ -138,10 +162,15 @@ body { padding-top: 60px; }
         padding: 7px 9px;
       }
 
-
+/*--Logo---*/
 .navbar .brand{
 	text-shadow:none;
 	color:#9D20AB;
+	font-size:18px;
+}
+
+.navbar .brand:hover{
+color:#F0EDEE;
 }
 
 .navbar .nav > li > a {
@@ -167,4 +196,30 @@ html,body{
     height: 60px;
 }
 
-	
+ @media (max-width: 979px) {
+ img.img-rounded{
+  
+        max-width: 130px;
+      }
+}
+
+@media (max-width: 767px){
+ img.img-rounded{
+        max-width: 100px;
+      }
+}
+
+/* customizing Bootstrap's responsive layout for large desktops*/
+@media (min-width: 1200px) {
+.container{
+	width:95%;
+}
+.navbar-inverse .brand{
+padding-left: 40px;
+}
+img.img-rounded{
+ 		max-height: 300px;
+        max-width: 300px;
+      }
+}
+

@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1355781940.2392929:@value{	I"length:EFiVtI"digest;
-F"%8acc7fc2c05933bb8dda559478e7414dI"source;
-FI"Vt/*
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1356895146.1824682:@value{	I"length:EFi:zI"digest;
+F"%6a713f71730f9036f682ef735ff5813eI"source;
+FI":z/*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
@@ -8227,7 +8227,7 @@ body {
     overflow: visible !important;
   }
 }
-/* line 6, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 8, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 html,
 body {
   height: 100%;
@@ -8236,7 +8236,7 @@ body {
 
 /*CSS to apply sticky footer at bottom of page - taken from http://twitter.github.com/bootstrap/examples/sticky-footer.html*/
 /* Wrapper for page content to push down footer */
-/* line 13, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 15, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #wrap {
   min-height: 100%;
   height: auto !important;
@@ -8246,13 +8246,13 @@ body {
 }
 
 /* Set the fixed height of the footer here */
-/* line 23, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 25, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #push,
 #footer {
   height: 60px;
 }
 
-/* line 26, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 28, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #footer {
   background-color: #f5f5f5;
   text-align: center;
@@ -8260,7 +8260,7 @@ body {
 
 /* Lastly, apply responsive CSS fixes as necessary */
 @media (max-width: 767px) {
-  /* line 33, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 35, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   #footer {
     margin-left: -20px;
     margin-right: -20px;
@@ -8268,17 +8268,34 @@ body {
     padding-right: 20px;
   }
 }
-/* line 42, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* 'logged in as <user>' display*/
+/* line 47, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #login {
-  color: white;
+  color: #F0EDEE;
+  padding-top: 10px;
+  padding-left: 13px;
 }
 
-/* line 46, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 53, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.btn btn-inverse.a {
+  color: white;
+}
+/* line 55, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.btn btn-inverse.a:visited {
+  color: white;
+}
+/* line 58, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.btn btn-inverse.a:hover {
+  color: #9D20AB;
+  text-decoration: none;
+}
+
+/* line 65, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .listing {
   clear: both;
 }
 
-/* line 50, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 69, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .event_item {
   background-color: white;
   padding: 10px;
@@ -8290,7 +8307,7 @@ body {
   border-color: #9D20AB;
 }
 
-/* line 61, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 80, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #event_list {
   background-color: white;
   padding: 10px;
@@ -8303,17 +8320,17 @@ body {
 }
 
 /*---Map infowindows----*/
-/* line 73, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 92, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #info {
   width: 50px;
 }
 
-/* line 77, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 96, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #description {
   text-align: justify;
 }
 
-/* line 81, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 100, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #box {
   background-color: white;
   -webkit-border-radius: 4px;
@@ -8325,57 +8342,60 @@ body {
   text-align: center;
 }
 
-/* line 93, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 112, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar {
   color: black;
   text-shadow: none;
 }
 
-/* line 98, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 117, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .search {
   float: right;
 }
 
 /*---Fix the navigation at side of map---*/
-/* line 103, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 124, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #map img {
   max-width: none;
 }
 
-/* line 106, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 127, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #map label {
   width: auto;
   display: inline;
 }
 
-/* line 110, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 131, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .btn-group {
   float: left;
 }
 
 /*taken from the bootstrap website*/
-/* line 116, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 137, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin {
   max-width: 300px;
-  padding: 19px 29px 29px;
+  padding: 19px 29px 19px;
   margin: 0 auto 20px;
   background-color: #fff;
-  border: 1px solid #e5e5e5;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  /*text-align: center;*/
+  border-style: solid;
+  border-width: 2px;
+  border-color: #9D20AB;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 130, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 154, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
   margin-bottom: 10px;
 }
 
-/* line 134, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 158, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin input[type="text"],
 .form-signin input[type="password"] {
   font-size: 16px;
@@ -8384,28 +8404,35 @@ body {
   padding: 7px 9px;
 }
 
-/* line 142, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/*--Logo---*/
+/* line 166, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .brand {
   text-shadow: none;
   color: #9D20AB;
+  font-size: 18px;
 }
 
-/* line 147, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 172, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.navbar .brand:hover {
+  color: #F0EDEE;
+}
+
+/* line 176, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .nav > li > a {
   text-shadow: none;
 }
 
-/* line 151, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 180, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .sign_up {
   text-align: center;
 }
 
-/* line 155, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 184, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 html, body {
   height: 100%;
 }
 
-/* line 159, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 188, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #wrap {
   min-height: 100%;
   height: auto !important;
@@ -8413,10 +8440,41 @@ html, body {
   margin: 0 auto -60px;
 }
 
-/* line 166, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 195, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #push,
 #footer {
   height: 60px;
+}
+
+@media (max-width: 979px) {
+  /* line 200, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  img.img-rounded {
+    max-width: 130px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 207, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  img.img-rounded {
+    max-width: 100px;
+  }
+}
+/* customizing Bootstrap's responsive layout for large desktops*/
+@media (min-width: 1200px) {
+  /* line 214, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  .container {
+    width: 95%;
+  }
+
+  /* line 217, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  .navbar-inverse .brand {
+    padding-left: 40px;
+  }
+
+  /* line 220, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  img.img-rounded {
+    max-height: 300px;
+    max-width: 300px;
+  }
 }
 .map_container {
   padding: 6px;
@@ -8529,4 +8587,4 @@ div.field, div.actions {
 }
 ;
 FI"_version;
-F"%5656b6e047eedd653c8e326f59657e97
+F"%59cd595cdecbe08b7dd8257146cf6d35
