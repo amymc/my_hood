@@ -40,7 +40,15 @@ body { padding-top: 60px; }
         }
       }
 
+/*---Admin DropDown Menu-----*/
 
+/*.nav .dropdown .dropdown-menu > li > a{  
+    background-color: black;   
+    &:hover{
+     background-color: white;
+    }
+     
+}*/
 
 
 /* 'logged in as <user>' display*/

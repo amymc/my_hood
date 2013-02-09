@@ -48,6 +48,15 @@
 	    // Change coordinates into a location 
 	    yourLocation = new google.maps.LatLng(latitude, longitude);
 
+$.ajax({
+                type: 'POST',
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                url: '/home',
+                dataType: 'json',
+                data: "latitude=" + latitude + "&longitude=" + longitude,          
+              });
+          
+
 
 		//Setup map and position on map
     	var myOptions = {
@@ -112,8 +121,21 @@
 	        }
 	   });
 	}
+	
+	
+		//	var lng = Gmaps.map.LatLng.latitude();
+        //    var lat = Gmaps.map.LatLng.longitude();
+	
+	    //    $.ajax({
+        //        type: 'POST',
+        //        url: 'events/index',
+        //        dataType: 'json',
+        //        data: "latitude=" + lat + "&longitude=" + lng,          
+        //      });
+          
 
 	function error(msg) {
 	    alert(msg);
 	}
+
 

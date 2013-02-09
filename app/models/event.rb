@@ -7,29 +7,23 @@ class Event < ActiveRecord::Base
     #performs geocoding everytime a new event is added to the database or an address is updated
  	after_validation :geocode, :if => :location_changed?
  	# Gmaps4rails
-	acts_as_gmappable :process_geocoding => false #:lat => :lat, :lng => :lng
+	acts_as_gmappable #:process_geocoding => false #:lat => :lat, :lng => :lng
 	#validates fields in the 'edit' and 'create new' forms
 	validates_presence_of :title, :description, :location
 	#adding the image uploader
 	mount_uploader :image, ImageUploader
 	
 
-def lat
-  center.lat
-end
 
-def lng
-  center.lng
-end
-
-
-      def gmaps4rails_location
-          location
-      end
+      #def gmaps4rails_location
+      #    location
+      #end
       
        def gmaps4rails_address
     		"#{self.latitude}, #{self.longitude}"
   	   end
+
+
 
       
      #adds infowindow which displays title and location of event and links to event show page
@@ -37,7 +31,10 @@ end
           "<a href = '/events/#{id}'>#{title} <br/> #{location}</a>"
      end
      
-
+	def eventsArray
+		userLocation = params[:latitude], params[:longitude]
+		@events = Event.near(userLocation,2)
+	end
 
 
 	def self.search(search)

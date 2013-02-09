@@ -1,0 +1,18 @@
+<%#=Using simple_form gem - less code required as the gem automatically creates a _form partial %>
+<%= simple_form_for @user, :html => { :class => 'form-signin' } do |f|%>
+	<fieldset>
+ 	<% if @user.errors.any? %>
+   		<div class="alert alert-error fade in"">
+          	<p> Check out the errors below!</p> 
+    	</div>
+    <% end %>
+	<h2 class="form-signin-heading">Create new user</h2>
+	<%#=Input label contains an '*' by default, ':required => false' removes it %>
+    <%= f.input :name, :required => false %>
+    <%= f.input :password, :required => false %>
+    <%= f.input :password_confirmation, :required => false  %>
+    <%= f.button :submit 
+    submit_tag "create user", :class => 'btn btn-inverse'%>
+    </fieldset>
+<% end %>
+

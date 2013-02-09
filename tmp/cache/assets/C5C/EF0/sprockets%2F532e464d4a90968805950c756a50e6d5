@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1356787697.163681:@value{	I"length:EFiqI"digest;
-F"%932cc9e12d2b33012e0a4fc51e726584I"source;
-FI"q
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1356984125.223797:@value{	I"length:EFiI"digest;
+F"%a3a1d9901942d39aba27c1678c410be0I"source;
+FI"
 	// Google Maps global map variable
 	var map;
 	var yourLocation;
@@ -49,6 +49,15 @@ FI"q
 
 	    // Change coordinates into a location 
 	    yourLocation = new google.maps.LatLng(latitude, longitude);
+
+$.ajax({
+                type: 'POST',
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                url: '/home',
+                dataType: 'json',
+                data: "latitude=" + latitude + "&longitude=" + longitude,          
+              });
+          
 
 
 		//Setup map and position on map
@@ -114,12 +123,25 @@ FI"q
 	        }
 	   });
 	}
+	
+	
+		//	var lng = Gmaps.map.LatLng.latitude();
+        //    var lat = Gmaps.map.LatLng.longitude();
+	
+	    //    $.ajax({
+        //        type: 'POST',
+        //        url: 'events/index',
+        //        dataType: 'json',
+        //        data: "latitude=" + lat + "&longitude=" + lng,          
+        //      });
+          
 
 	function error(msg) {
 	    alert(msg);
 	}
 
+
 ;
 ;
 FI"_version;
-F"%065fe1f9bf0bfcc3cd0daf291a9b29c7
+F"%c65a9eb783d037c78ac56373afba35a6

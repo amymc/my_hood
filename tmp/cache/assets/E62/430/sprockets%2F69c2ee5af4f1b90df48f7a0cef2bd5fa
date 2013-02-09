@@ -1,0 +1,29 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1355692817.812914:@value{	I"length:EFiÔI"digest;
+F"%c5270dbb757bd4bd7500221bf2c6f5e2I"source;
+FI"Ô.map_container {
+  padding: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc #ccc #999 #ccc;
+  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
+  width: 700px;
+}
+
+.gmaps4rails_map {
+  width: 700px;
+  height: 400px;
+}
+
+.bing_map {
+   position: absolute;
+   top: 20;
+   left: 10;
+   width: 400px;
+   height: 400px;
+   border:#555555 2px solid;
+}
+;
+FI"_version;
+F"%7728bb073899508805a8260fe4b8f1c5

@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1356816538.442731:@value{	I"length:EFix∆I"digest;
-F"%36ced043cc9a310dcd5fea7a7ad19125I"source;
-FI"x∆/*!
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1357060568.85075:@value{	I"length:EFi#…I"digest;
+F"%6c0466770851d040da54542e3c465f5dI"source;
+FI"#…/*!
  * jQuery JavaScript Library v1.8.2
  * http://jquery.com/
  *
@@ -12891,6 +12891,15 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 	    // Change coordinates into a location 
 	    yourLocation = new google.maps.LatLng(latitude, longitude);
 
+$.ajax({
+                type: 'POST',
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                url: '/home',
+                dataType: 'json',
+                data: "latitude=" + latitude + "&longitude=" + longitude,          
+              });
+          
+
 
 		//Setup map and position on map
     	var myOptions = {
@@ -12955,10 +12964,23 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 	        }
 	   });
 	}
+	
+	
+		//	var lng = Gmaps.map.LatLng.latitude();
+        //    var lat = Gmaps.map.LatLng.longitude();
+	
+	    //    $.ajax({
+        //        type: 'POST',
+        //        url: 'events/index',
+        //        dataType: 'json',
+        //        data: "latitude=" + lat + "&longitude=" + lng,          
+        //      });
+          
 
 	function error(msg) {
 	    alert(msg);
 	}
+
 
 ;
 (function() {
@@ -12988,4 +13010,4 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 ;
 ;
 TI"_version;
-F"%a5136424dcd8aac9831480ab898b7128
+F"%3aec760adda9bf46a25f02c9f2cbf313

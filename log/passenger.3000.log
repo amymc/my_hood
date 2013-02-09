@@ -1,0 +1,140 @@
+2012/12/30 03:03:07 [emerg] 14220#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2012/12/30 03:03:07 [emerg] 14220#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2012/12/30 03:03:07 [emerg] 14220#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2012/12/30 03:03:07 [emerg] 14220#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2012/12/30 03:03:07 [emerg] 14220#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2012/12/30 03:03:07 [emerg] 14220#0: still could not bind()
+[ pid=14276 thr=0x1007a2000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 03:11:51.210 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=14276 thr=0x10073a000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 12:28:29.849 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=14276 thr=0x1005ce000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 13:11:34.754 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=20209 thr=0x10116a000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 13:47:05.705 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=806 thr=0x101032000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 18:23:34.285 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=806 thr=0x101032000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 18:46:25.463 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=806 thr=0x10079e000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 19:12:20.258 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=806 thr=0x10076a000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 20:01:57.169 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=806 thr=0x10123a000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 20:15:18.941 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=806 thr=0x100666000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 20:15:21.998 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=806 thr=0x1007d2000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 20:17:44.29 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=806 thr=0x10119e000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 20:32:40.851 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=806 thr=0x10116a000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 20:33:55.529 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=806 thr=0x10076a000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 20:33:55.700 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=806 thr=0x10069a000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 20:39:11.519 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=806 thr=0x101136000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 20:43:53.403 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=393 thr=0x10119e000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-30 23:03:49.274 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+Geocoding API not responding fast enough (see Geocoder::Configuration.timeout to set limit).
+Geocoding API not responding fast enough (see Geocoder::Configuration.timeout to set limit).
+2012/12/31 17:19:39 [error] 401#0: *8049 open() "/Users/amymc/my_hood/public/maps" failed (2: No such file or directory), client: 127.0.0.1, server: _, request: "GET /maps HTTP/1.1", host: "127.0.0.1:3000", referrer: "http://127.0.0.1:3000/events"
+2012/12/31 17:19:47 [error] 401#0: *8049 open() "/Users/amymc/my_hood/public/maps" failed (2: No such file or directory), client: 127.0.0.1, server: _, request: "GET /maps HTTP/1.1", host: "127.0.0.1:3000", referrer: "http://127.0.0.1:3000/events"
+2012/12/31 17:20:47 [error] 401#0: *8052 open() "/Users/amymc/my_hood/public/events" failed (2: No such file or directory), client: 127.0.0.1, server: _, request: "GET /events HTTP/1.1", host: "127.0.0.1:3000", referrer: "http://127.0.0.1:3000/"
+[ pid=5823 thr=0x100666000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-31 19:39:44.120 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=5823 thr=0x10116a000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-31 19:52:16.274 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=5823 thr=0x10109a000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-31 19:59:40.682 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=5823 thr=0x101066000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-31 19:59:46.857 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+Geocoding API not responding fast enough (see Geocoder::Configuration.timeout to set limit).
+Geocoding API not responding fast enough (see Geocoder::Configuration.timeout to set limit).
+Geocoding API not responding fast enough (see Geocoder::Configuration.timeout to set limit).
+Geocoding API not responding fast enough (see Geocoder::Configuration.timeout to set limit).
+[ pid=5823 thr=0x10119e000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-31 20:45:01.278 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=5823 thr=0x10116a000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-31 21:25:05.131 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=5823 thr=0x1010ce000 file=ext/nginx/HelperAgent.cpp:923 time=2012-12-31 23:40:43.481 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+cache: [GET /events] miss
+cache: [HEAD /] miss
+cache: [GET /assets/application.css?body=1] miss, store
+cache: [GET /assets/jquery.js?body=1] miss, store
+cache: [GET /assets/bootstrap_and_overrides.css?body=1] miss, store
+cache: [GET /assets/jquery_ujs.js?body=1] miss, store
+cache: [GET /assets/bootstrap-alert.js?body=1] miss, store
+cache: [GET /assets/maps.css?body=1] miss, store
+cache: [GET /assets/bootstrap-scrollspy.js?body=1] miss, store
+cache: [GET /assets/bootstrap-dropdown.js?body=1] miss, store
+cache: [GET /assets/bootstrap-tooltip.js?body=1] miss, store
+cache: [GET /assets/gmaps4rails.css?body=1] miss, store
+cache: [GET /assets/events.css?body=1] miss, store
+cache: [GET /assets/bootstrap-tab.js?body=1] miss, store
+cache: [GET /assets/bootstrap-collapse.js?body=1] miss, store
+cache: [GET /assets/bootstrap-carousel.js?body=1] miss, store
+cache: [GET /assets/bootstrap-popover.js?body=1] miss, store
+cache: [GET /assets/scaffolds.css?body=1] miss, store
+cache: [GET /assets/bootstrap-button.js?body=1] miss, store
+cache: [GET /assets/bootstrap-typeahead.js?body=1] miss, store
+cache: [GET /assets/bootstrap.js?body=1] miss, store
+cache: [GET /assets/events.js?body=1] miss, store
+cache: [GET /assets/bootstrap-affix.js?body=1] miss, store
+cache: [GET /assets/bootstrap-modal.js?body=1] miss, store
+cache: [GET /assets/maps.js?body=1] miss, store
+cache: [GET /assets/map.js?body=1] miss, store
+cache: [GET /assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1] miss, store
+cache: [GET /assets/gmaps4rails/gmaps4rails.base.js?body=1] miss, store
+cache: [GET /assets/sessions.js?body=1] miss, store
+cache: [GET /assets/users.js?body=1] miss, store
+cache: [GET /assets/bootstrap-transition.js?body=1] miss, store
+cache: [GET /assets/application.js?body=1] miss, store
+cache: [POST /events/index] invalidate, pass
+cache: [GET /assets/bootstrap_and_overrides.css?body=1] stale, valid, store
+cache: [GET /assets/events.css?body=1] stale, valid, store
+cache: [GET /assets/maps.css?body=1] stale, valid, store
+cache: [GET /assets/gmaps4rails.css?body=1] stale, valid, store
+cache: [GET /assets/application.css?body=1] stale, valid, store
+cache: [GET /assets/jquery_ujs.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-transition.js?body=1] stale, valid, store
+cache: [GET /assets/scaffolds.css?body=1] stale, valid, store
+cache: [GET /assets/jquery.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-dropdown.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-modal.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-alert.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-button.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-popover.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-collapse.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-carousel.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-typeahead.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-tab.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-tooltip.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-affix.js?body=1] stale, valid, store
+cache: [GET /assets/events.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-scrollspy.js?body=1] stale, valid, store
+cache: [GET /assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1] stale, valid, store
+cache: [GET /assets/users.js?body=1] stale, valid, store
+cache: [GET /assets/sessions.js?body=1] stale, valid, store
+cache: [GET /assets/map.js?body=1] stale, valid, store
+cache: [GET /assets/maps.js?body=1] stale, valid, store
+cache: [GET /assets/gmaps4rails/gmaps4rails.base.js?body=1] stale, valid, store
+cache: [GET /assets/application.js?body=1] stale, valid, store
+cache: [POST /events/index] invalidate, pass
+cache: [GET /assets/bootstrap_and_overrides.css?body=1] stale, valid, store
+cache: [GET /assets/events.css?body=1] stale, valid, store
+cache: [GET /assets/application.css?body=1] stale, valid, store
+cache: [GET /assets/maps.css?body=1] stale, valid, store
+cache: [GET /assets/scaffolds.css?body=1] stale, valid, store
+cache: [GET /assets/jquery_ujs.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-transition.js?body=1] stale, valid, store
+cache: [GET /assets/gmaps4rails.css?body=1] stale, valid, store
+cache: [GET /assets/jquery.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-tab.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-scrollspy.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-dropdown.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-alert.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-modal.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-typeahead.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-button.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-carousel.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-affix.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-collapse.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-popover.js?body=1] stale, valid, store
+cache: [GET /assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap-tooltip.js?body=1] stale, valid, store
+cache: [GET /assets/gmaps4rails/gmaps4rails.base.js?body=1] stale, valid, store
+cache: [GET /assets/sessions.js?body=1] stale, valid, store
+cache: [GET /assets/users.js?body=1] stale, valid, store
+cache: [GET /assets/map.js?body=1] stale, valid, store
+cache: [GET /assets/application.js?body=1] stale, valid, store
+cache: [GET /assets/maps.js?body=1] stale, valid, store
+cache: [GET /assets/events.js?body=1] stale, valid, store
+cache: [GET /assets/bootstrap.js?body=1] stale, valid, store
+cache: [POST /events/index] invalidate, pass
+[ pid=27179 thr=0x101066000 file=ext/nginx/HelperAgent.cpp:923 time=2013-01-01 15:24:57.582 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=27179 thr=0x1006ce000 file=ext/nginx/HelperAgent.cpp:923 time=2013-01-01 17:09:42.611 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=27179 thr=0x10116a000 file=ext/nginx/HelperAgent.cpp:923 time=2013-01-01 17:26:16.555 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=4563 thr=0x1012a2000 file=ext/nginx/HelperAgent.cpp:923 time=2013-01-05 01:59:18.85 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=4563 thr=0x10123a000 file=ext/nginx/HelperAgent.cpp:923 time=2013-01-05 01:59:18.85 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=4563 thr=0x10126e000 file=ext/nginx/HelperAgent.cpp:923 time=2013-01-05 01:59:18.85 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.

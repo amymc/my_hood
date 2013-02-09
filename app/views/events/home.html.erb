@@ -1,0 +1,146 @@
+
+<head>
+</head>
+
+<body>
+
+
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+		
+		
+			<button class ="btn btn-inverse" id="go">Locate me!</button>
+			<br/><br/>
+			
+			<div id="map"><%# gmaps4rails(@json) %>
+			
+			  <%= gmaps( #:map_options => { :disableDefaultUI => true, :auto_adjust => true, :detect_location => true, :center_on_user => true },
+         :markers     => { :data => @json}
+         
+         #:scripts     => :none  
+         ) %>
+         <%#= gmaps( :map_options => {:container_class => "map_container",:id => "map",:class => "gmaps4rails_map", :detect_location => true, :center_on_user=> true}, :scripts => :none, :markers => { :data => @json } ) %>
+			</div>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+<% content_for :scripts do %>
+
+        <script type="text/javascript">
+       // var lat;
+    	//var lng;
+    	//var markerArray = <%= @json.to_s.html_safe %>;
+        
+   //(Gmaps.map.geolocationSuccess = function(){
+          //if(Gmaps.map.callback){
+            //lng = Gmaps.map.userLocation.lng();
+            //lat = Gmaps.map.userLocation.lat();
+            //Gmaps.map.addMarkers([{
+            //    "lng": lng,
+            //    "lat": lat,
+            //    "picture": "http://gmaps-samples.googlecode.com/svn/trunk/markers/pink/blank.png",
+             //   "width": "37",
+             //   "height": "34",
+                
+          //  }]);
+          //    console.log ("test")
+   //Gmaps.map.addMarkers(markerArray);
+     //Gmaps.map.addMarkers([<%= raw (@json)%>]);}       
+        
+  // Gmaps.map.addMarkers(<%=raw @json %>);
+   
+      // console.log("shit")
+                 
+      
+//$(document).ready(function() {
+  //  Gmaps.map.callback = function() {
+    //  _.each(Gmaps.map.markers, function(marker) {
+      //  console.log("blah")
+     // })
+    //}
+  //});
+       
+       // $.ajax({
+        //        type: 'POST',
+        //        beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+        //        url: 'events/home',
+        //        dataType: 'json',
+         //       data: "latitude=" + lat + "&longitude=" + lng,          
+        //      });
+          
+
+     
+       
+       //if(Gmaps.map.callback2){
+       //Gmaps.map.addMarkers(markerArray);
+       //console.log ("test")
+       //}
+        
+        
+       // $.getJSON('events/index.json', function() {
+  //console.log(data); //you'll find your json here
+//});
+        //  $(document).ready(function() {
+  //Gmaps.map.callback = function() {
+  // Gmaps.map.addMarkers(<%=raw @json %>);
+  
+ //}
+ 
+ //$(document).ready(function() {
+ 
+ //Gmaps.map.callback = function() {
+ // Gmaps.map.addMarkers([<%= raw (@json)%>]);}
+        
+  // Gmaps.map.addMarkers(<%=raw @json %>);
+   
+     //  console.log("shit2")
+
+ 
+  //}})
+
+
+ 
+ 
+ 
+ //};)     
+        //$.post("index.html.erb");
+        
+       
+ 		//$.ajax({
+		//url: '/events',
+        //type: 'POST',
+        //dataType: 'json',
+        //data: "latitude=" + lat + "&longitude=" + lng,
+      //    success: function(data) {
+      //      alert("Successful");
+      //    },
+       //   failure: function() {
+       //     alert("Unsuccessful");
+       //   }
+       //cache: true,
+       //success: function (data) {}
+   //  });
+//}
+            
+	 
+	
+	//}
+		   
+        </script>
+        <% end %>
+
+
+
+
+<%#script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script%>
+<%#= javascript_include_tag :all %>
+<%#= stylesheet_link_tag :all %>
+ 
+
+
+</html>

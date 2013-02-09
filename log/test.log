@@ -1,0 +1,287 @@
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "events"[0m
+  [1m[35mFixture Insert (174.0ms)[0m  INSERT INTO "events" ("title", "description", "price", "date", "location", "genre", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1.5, 'MyString', 'MyString', 'MyString', '2012-12-30 20:24:12', '2012-12-30 20:24:12', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "events" ("title", "description", "price", "date", "location", "genre", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1.5, 'MyString', 'MyString', 'MyString', '2012-12-30 20:24:12', '2012-12-30 20:24:12', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "maps"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "maps" ("created_at", "updated_at", "id") VALUES ('2012-12-30 20:24:12', '2012-12-30 20:24:12', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "maps" ("created_at", "updated_at", "id") VALUES ('2012-12-30 20:24:12', '2012-12-30 20:24:12', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2012-12-30 20:24:12', '2012-12-30 20:24:12', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2012-12-30 20:24:12', '2012-12-30 20:24:12', 298486374)[0m
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" [0m
+  Processing by EventsController#create as HTML
+  Parameters: {"event"=>{"id"=>"980190962", "title"=>"MyString", "description"=>"MyString", "price"=>"1.5", "date"=>"MyString", "location"=>"MyString", "genre"=>"MyString", "created_at"=>"2012-12-30 20:24:12 UTC", "updated_at"=>"2012-12-30 20:24:12 UTC", "area"=>nil, "latitude"=>nil, "longitude"=>nil, "image"=>nil, "gmaps"=>nil}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+The address you passed seems invalid, status was: ZERO_RESULTS.
+Request was: http://maps.googleapis.com/maps/api/geocode/json?language=en&address=, &sensor=false
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendered events/new.html.erb within layouts/application (242.5ms)
+Completed 200 OK in 2398ms (Views: 289.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "events" 
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "events" 
+  Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/events
+Completed 302 Found in 4ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" [0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.1ms)
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" [0m
+Rendered /Users/amymc/.rvm/gems/ruby-1.9.3-p194/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.6ms)
+Completed 200 OK in 194ms (Views: 189.5ms | ActiveRecord: 0.2ms)
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by EventsController#new as HTML
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by EventsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.1ms)
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by EventsController#update as HTML
+  Parameters: {"event"=>{"id"=>"980190962", "title"=>"MyString", "description"=>"MyString", "price"=>"1.5", "date"=>"MyString", "location"=>"MyString", "genre"=>"MyString", "created_at"=>"2012-12-30 20:24:12 UTC", "updated_at"=>"2012-12-30 20:24:12 UTC", "area"=>nil, "latitude"=>nil, "longitude"=>nil, "image"=>nil, "gmaps"=>nil}, "id"=>"980190962"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign protected attributes: id
+The address you passed seems invalid, status was: ZERO_RESULTS.
+Request was: http://maps.googleapis.com/maps/api/geocode/json?language=en&address=, &sensor=false
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 1012ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+  [1m[36mMap Load (0.2ms)[0m  [1mSELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "maps" 
+  Processing by MapsController#create as HTML
+  Parameters: {"map"=>{"id"=>"980190962", "created_at"=>"2012-12-30 20:24:12 UTC", "updated_at"=>"2012-12-30 20:24:12 UTC"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "maps" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 30 Dec 2012 20:24:12 UTC +00:00], ["updated_at", Sun, 30 Dec 2012 20:24:12 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/maps/980190963
+Completed 302 Found in 6ms
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "maps" 
+  [1m[36mMap Load (0.1ms)[0m  [1mSELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "maps" 
+  Processing by MapsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mMap Load (0.1ms)[0m  [1mSELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "maps" WHERE "maps"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/maps
+Completed 302 Found in 4ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "maps" [0m
+  [1m[35mMap Load (0.1ms)[0m  SELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by MapsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mMap Load (0.1ms)[0m  [1mSELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 500 Internal Server Error in 82ms
+  [1m[35mMap Load (0.1ms)[0m  SELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by MapsController#index as HTML
+  [1m[36mMap Load (0.2ms)[0m  [1mSELECT "maps".* FROM "maps" [0m
+Rendered /Users/amymc/.rvm/gems/ruby-1.9.3-p194/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.7ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.2ms)
+  [1m[35mMap Load (0.1ms)[0m  SELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by MapsController#new as HTML
+  [1m[36mMap Load (0.1ms)[0m  [1mSELECT "maps".* FROM "maps" [0m
+Completed 500 Internal Server Error in 4ms
+  [1m[35mMap Load (0.2ms)[0m  SELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by MapsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mMap Load (0.1ms)[0m  [1mSELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.1ms)
+  [1m[35mMap Load (0.1ms)[0m  SELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by MapsController#update as HTML
+  Parameters: {"map"=>{"id"=>"980190962", "created_at"=>"2012-12-30 20:24:12 UTC", "updated_at"=>"2012-12-30 20:24:12 UTC"}, "id"=>"980190962"}
+  [1m[36mMap Load (0.1ms)[0m  [1mSELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/maps/980190962
+Completed 302 Found in 4ms
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"id"=>"980190962", "name"=>"MyString", "password_digest"=>"[FILTERED]", "created_at"=>"2012-12-30 20:24:12 UTC", "updated_at"=>"2012-12-30 20:24:12 UTC"}}
+WARNING: Can't mass-assign protected attributes: id, password_digest, created_at, updated_at
+Completed 500 Internal Server Error in 12ms
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 500 Internal Server Error in 10ms
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 500 Internal Server Error in 11ms
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 46ms
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 13ms
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 32ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"id"=>"980190962", "name"=>"MyString", "password_digest"=>"[FILTERED]", "created_at"=>"2012-12-30 20:24:12 UTC", "updated_at"=>"2012-12-30 20:24:12 UTC"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 500 Internal Server Error in 9ms
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "events"[0m
+  [1m[35mFixture Insert (71.7ms)[0m  INSERT INTO "events" ("title", "description", "price", "date", "location", "genre", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1.5, 'MyString', 'MyString', 'MyString', '2012-12-30 20:46:52', '2012-12-30 20:46:52', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "events" ("title", "description", "price", "date", "location", "genre", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1.5, 'MyString', 'MyString', 'MyString', '2012-12-30 20:46:52', '2012-12-30 20:46:52', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "maps"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "maps" ("created_at", "updated_at", "id") VALUES ('2012-12-30 20:46:52', '2012-12-30 20:46:52', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "maps" ("created_at", "updated_at", "id") VALUES ('2012-12-30 20:46:52', '2012-12-30 20:46:52', 298486374)
+  [1m[36mFixture Delete (36.8ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2012-12-30 20:46:52', '2012-12-30 20:46:52', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2012-12-30 20:46:52', '2012-12-30 20:46:52', 298486374)[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" [0m
+  Processing by EventsController#create as HTML
+  Parameters: {"event"=>{"id"=>"980190962", "title"=>"MyString", "description"=>"MyString", "price"=>"1.5", "date"=>"MyString", "location"=>"MyString", "genre"=>"MyString", "created_at"=>"2012-12-30 20:46:52 UTC", "updated_at"=>"2012-12-30 20:46:52 UTC", "area"=>nil, "latitude"=>nil, "longitude"=>nil, "image"=>nil, "gmaps"=>nil}}
+WARNING: Can't mass-assign protected attributes: id
+Redirected to http://test.host/
+Completed 302 Found in 71ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "events" 
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "events" 
+  Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Redirected to http://test.host/
+Completed 302 Found in 10ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "events" 
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "980190962"]]
+Redirected to http://test.host/
+Completed 302 Found in 49ms
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" 
+Rendered /Users/amymc/.rvm/gems/ruby-1.9.3-p194/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.6ms)
+Completed 200 OK in 230ms (Views: 178.6ms | ActiveRecord: 0.2ms)
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by EventsController#new as HTML
+Redirected to http://test.host/
+Completed 302 Found in 13ms
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by EventsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 15ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by EventsController#update as HTML
+  Parameters: {"event"=>{"id"=>"980190962", "title"=>"MyString", "description"=>"MyString", "price"=>"1.5", "date"=>"MyString", "location"=>"MyString", "genre"=>"MyString", "created_at"=>"2012-12-30 20:46:52 UTC", "updated_at"=>"2012-12-30 20:46:52 UTC", "area"=>nil, "latitude"=>nil, "longitude"=>nil, "image"=>nil, "gmaps"=>nil}, "id"=>"980190962"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "980190962"]]
+Redirected to http://test.host/
+Completed 302 Found in 56ms
+  [1m[36mMap Load (0.2ms)[0m  [1mSELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "maps" 
+  Processing by MapsController#create as HTML
+  Parameters: {"map"=>{"id"=>"980190962", "created_at"=>"2012-12-30 20:46:52 UTC", "updated_at"=>"2012-12-30 20:46:52 UTC"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "maps" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 30 Dec 2012 20:46:52 UTC +00:00], ["updated_at", Sun, 30 Dec 2012 20:46:52 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/maps/980190963
+Completed 302 Found in 6ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "maps" 
+  [1m[36mMap Load (0.1ms)[0m  [1mSELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "maps" 
+  Processing by MapsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mMap Load (0.1ms)[0m  [1mSELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "maps" WHERE "maps"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/maps
+Completed 302 Found in 3ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "maps" [0m
+  [1m[35mMap Load (0.1ms)[0m  SELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by MapsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mMap Load (0.1ms)[0m  [1mSELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 500 Internal Server Error in 13ms
+  [1m[35mMap Load (0.1ms)[0m  SELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by MapsController#index as HTML
+  [1m[36mMap Load (0.2ms)[0m  [1mSELECT "maps".* FROM "maps" [0m
+Rendered /Users/amymc/.rvm/gems/ruby-1.9.3-p194/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.6ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+  [1m[35mMap Load (0.1ms)[0m  SELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by MapsController#new as HTML
+  [1m[36mMap Load (0.1ms)[0m  [1mSELECT "maps".* FROM "maps" [0m
+Completed 500 Internal Server Error in 4ms
+  [1m[35mMap Load (0.1ms)[0m  SELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by MapsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mMap Load (0.1ms)[0m  [1mSELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.1ms)
+  [1m[35mMap Load (0.1ms)[0m  SELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by MapsController#update as HTML
+  Parameters: {"map"=>{"id"=>"980190962", "created_at"=>"2012-12-30 20:46:52 UTC", "updated_at"=>"2012-12-30 20:46:52 UTC"}, "id"=>"980190962"}
+  [1m[36mMap Load (0.1ms)[0m  [1mSELECT "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/maps/980190962
+Completed 302 Found in 4ms
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"id"=>"980190962", "name"=>"MyString", "password_digest"=>"[FILTERED]", "created_at"=>"2012-12-30 20:46:52 UTC", "updated_at"=>"2012-12-30 20:46:52 UTC"}}
+WARNING: Can't mass-assign protected attributes: id, password_digest, created_at, updated_at
+Redirected to http://test.host/
+Completed 302 Found in 13ms
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" 
+  Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Redirected to http://test.host/
+Completed 302 Found in 12ms
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "980190962"]]
+Redirected to http://test.host/
+Completed 302 Found in 16ms
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 81ms
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by UsersController#new as HTML
+Redirected to http://test.host/
+Completed 302 Found in 12ms
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 101ms (Views: 44.0ms | ActiveRecord: 0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"id"=>"980190962", "name"=>"MyString", "password_digest"=>"[FILTERED]", "created_at"=>"2012-12-30 20:46:52 UTC", "updated_at"=>"2012-12-30 20:46:52 UTC"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Redirected to http://test.host/
+Completed 302 Found in 11ms

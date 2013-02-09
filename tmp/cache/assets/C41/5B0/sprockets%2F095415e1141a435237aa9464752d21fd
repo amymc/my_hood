@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1356895146.1824682:@value{	I"length:EFi:zI"digest;
-F"%6a713f71730f9036f682ef735ff5813eI"source;
-FI":z/*
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1356909999.5798159:@value{	I"length:EFiãzI"digest;
+F"%63461c7a7ada57e12fcf77a2b47ae7baI"source;
+FI"ãz/*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
@@ -8268,34 +8268,42 @@ body {
     padding-right: 20px;
   }
 }
+/*---Admin DropDown Menu-----*/
+/*.nav .dropdown .dropdown-menu > li > a{  
+    background-color: black;   
+    &:hover{
+     background-color: white;
+    }
+     
+}*/
 /* 'logged in as <user>' display*/
-/* line 47, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 55, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #login {
   color: #F0EDEE;
   padding-top: 10px;
   padding-left: 13px;
 }
 
-/* line 53, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 61, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .btn btn-inverse.a {
   color: white;
 }
-/* line 55, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 63, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .btn btn-inverse.a:visited {
   color: white;
 }
-/* line 58, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 66, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .btn btn-inverse.a:hover {
   color: #9D20AB;
   text-decoration: none;
 }
 
-/* line 65, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 73, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .listing {
   clear: both;
 }
 
-/* line 69, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 77, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .event_item {
   background-color: white;
   padding: 10px;
@@ -8307,7 +8315,7 @@ body {
   border-color: #9D20AB;
 }
 
-/* line 80, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 88, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #event_list {
   background-color: white;
   padding: 10px;
@@ -8320,17 +8328,17 @@ body {
 }
 
 /*---Map infowindows----*/
-/* line 92, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 100, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #info {
   width: 50px;
 }
 
-/* line 96, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 104, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #description {
   text-align: justify;
 }
 
-/* line 100, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 108, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #box {
   background-color: white;
   -webkit-border-radius: 4px;
@@ -8342,36 +8350,36 @@ body {
   text-align: center;
 }
 
-/* line 112, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 120, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar {
   color: black;
   text-shadow: none;
 }
 
-/* line 117, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 125, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .search {
   float: right;
 }
 
 /*---Fix the navigation at side of map---*/
-/* line 124, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 132, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #map img {
   max-width: none;
 }
 
-/* line 127, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 135, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #map label {
   width: auto;
   display: inline;
 }
 
-/* line 131, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 139, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .btn-group {
   float: left;
 }
 
 /*taken from the bootstrap website*/
-/* line 137, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 145, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin {
   max-width: 300px;
   padding: 19px 29px 19px;
@@ -8389,13 +8397,13 @@ body {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 154, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 162, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
   margin-bottom: 10px;
 }
 
-/* line 158, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 166, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-signin input[type="text"],
 .form-signin input[type="password"] {
   font-size: 16px;
@@ -8405,34 +8413,34 @@ body {
 }
 
 /*--Logo---*/
-/* line 166, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 174, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .brand {
   text-shadow: none;
   color: #9D20AB;
   font-size: 18px;
 }
 
-/* line 172, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 180, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .brand:hover {
   color: #F0EDEE;
 }
 
-/* line 176, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 184, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar .nav > li > a {
   text-shadow: none;
 }
 
-/* line 180, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 188, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .sign_up {
   text-align: center;
 }
 
-/* line 184, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 192, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 html, body {
   height: 100%;
 }
 
-/* line 188, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 196, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #wrap {
   min-height: 100%;
   height: auto !important;
@@ -8440,37 +8448,37 @@ html, body {
   margin: 0 auto -60px;
 }
 
-/* line 195, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 203, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #push,
 #footer {
   height: 60px;
 }
 
 @media (max-width: 979px) {
-  /* line 200, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 208, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   img.img-rounded {
     max-width: 130px;
   }
 }
 @media (max-width: 767px) {
-  /* line 207, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 215, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   img.img-rounded {
     max-width: 100px;
   }
 }
 /* customizing Bootstrap's responsive layout for large desktops*/
 @media (min-width: 1200px) {
-  /* line 214, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 222, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   .container {
     width: 95%;
   }
 
-  /* line 217, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 225, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   .navbar-inverse .brand {
     padding-left: 40px;
   }
 
-  /* line 220, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 228, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   img.img-rounded {
     max-height: 300px;
     max-width: 300px;
@@ -8587,4 +8595,4 @@ div.field, div.actions {
 }
 ;
 FI"_version;
-F"%59cd595cdecbe08b7dd8257146cf6d35
+F"%dfca76d7242dc04539d002677c9111df

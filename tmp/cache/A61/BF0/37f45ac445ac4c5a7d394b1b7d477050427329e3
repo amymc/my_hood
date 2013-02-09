@@ -1,0 +1,7 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1357053576.591667:@value[I"|/* line 7, ../../app/assets/stylesheets/maps.css.scss */
+#map {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #000;
+}
+:EF
