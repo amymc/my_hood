@@ -1,4 +1,6 @@
-This is a responsive, location-based, events listing website. Built using Ruby on Rails, Twitter Bootstrap and the Google Maps API, it uses Geolocation to detect the user's location and, based on this, returns suggestions of things-to-do nearby. 
+This is a responsive, location-based, events listing website. 
+
+Built using **Ruby on Rails**, **Twitter Bootstrap** and the **Google Maps API**, it uses Geolocation to detect the user's location and, based on this, returns suggestions of things-to-do nearby. 
 
 Screenshots can be viewed [here] (http://amymc.github.io/my_hood/)
 
