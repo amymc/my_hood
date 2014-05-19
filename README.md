@@ -4,7 +4,7 @@ Built using **Ruby on Rails**, **Twitter Bootstrap** and the **Google Maps API**
 
 Screenshots can be viewed [here] (http://amymc.github.io/my_hood/)
 
-#####Gems used#####
+**Gems used**
 [CanCan] (https://github.com/ryanb/cancan) <br/>
 [CarrierWave] (https://github.com/jnicklas/carrierwave) <br/>
 [Gmaps4rails] (https://github.com/apneadiving/Google-Maps-for-Rails) <br/>
