@@ -5,8 +5,8 @@ Built using **Ruby on Rails**, **Twitter Bootstrap** and the **Google Maps API**
 Screenshots can be viewed [here] (http://amymc.github.io/my_hood/)
 
 **Gems used**<br/>
-[CanCan] (https://github.com/ryanb/cancan) <br/>
-[CarrierWave] (https://github.com/jnicklas/carrierwave) <br/>
+[CanCan] (https://github.com/ryanb/cancan) <br/> - authorization library to prevent general public from accessing admin area of the site
+[CarrierWave] (https://github.com/jnicklas/carrierwave) <br/> - for uploading images
 [Gmaps4rails] (https://github.com/apneadiving/Google-Maps-for-Rails) <br/>
 [Ruby Geocoder] (https://github.com/alexreisner/geocoder) <br/>
 [Simple Form] (https://github.com/plataformatec/simple_form)
